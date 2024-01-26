@@ -47,9 +47,7 @@ A Sawtooth network has the following requirements:
 
   This environment includes the Sawtooth REST API on all validator
   nodes. However, an application could provide a custom REST API (or
-  no REST API). See [Sawtooth Supply
-  Chain](https://github.com/hyperledger/sawtooth-supply-chain) for an
-  example of a custom REST API.
+  no REST API).
 
 - Each validator node must advertise a routable address. The Docker
   and Kubernetes platforms provide preconfigured settings. For the
@@ -119,7 +117,7 @@ For more information, see [Step 9: Stop the Sawtooth Environment](docker#stop-sa
 ## Step 1: Download the Docker Compose File
 
 Download the Docker Compose file for a multiple-node network,
-[sawtooth-default-poet.yaml](https://github.com/hyperledger/sawtooth-core/blob/main/docker/compose/sawtooth-default-poet.yaml).
+[sawtooth-default-poet.yaml](https://github.com/splintercommunity/sawtooth-core/blob/main/docker/compose/sawtooth-default-poet.yaml).
 Save this file in the same directory as the single-node compose file
 (`sawtooth-default.yaml`).
 
@@ -867,7 +865,7 @@ on-chain setting.
 
 # Kubernetes: Start a Multiple-node Sawtooth Network {#proc-multi-kube-label}
 
-This procedure explains how to create a Hyperledger Sawtooth network
+This procedure explains how to create a Sawtooth network
 with
 [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/).
 This environment uses
@@ -1032,7 +1030,7 @@ Minikube](https://kubernetes.io/docs/setup/minikube/).
 
 Download the Kubernetes configuration (kubeconfig) file for a Sawtooth
 network,
-[sawtooth-kubernetes-default-poet.yaml](https://github.com/hyperledger/sawtooth-core/blob/main/docker/kubernetes/sawtooth-kubernetes-default-poet.yaml).
+[sawtooth-kubernetes-default-poet.yaml](https://github.com/splintercommunity/sawtooth-core/blob/main/docker/kubernetes/sawtooth-kubernetes-default-poet.yaml).
 
 This kubeconfig file creates a Sawtooth network with five pods, each
 running a Sawtooth validator node. The pods are numbered from 0 to 4.

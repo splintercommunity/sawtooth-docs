@@ -6,7 +6,7 @@
 > information, see the [conversion status]({% link
 docs/1.1/conversion_status.md %}).
 
-Hyperledger Sawtooth is an enterprise blockchain platform for building
+Sawtooth is an enterprise blockchain platform for building
 distributed ledger applications and networks. The design philosophy
 targets keeping ledgers *distributed* and making smart contracts *safe*,
 particularly for enterprise use.
@@ -23,7 +23,7 @@ Sawtooth\'s core design allows applications to choose the transaction
 rules, permissioning, and consensus algorithms that support their unique
 business needs.
 
-Sawtooth is an open source project under the Hyperledger umbrella. For
+Sawtooth is an open source project. For
 information on how to contribute, see [Join the Sawtooth
 Community](#join-the-sawtooth-community).
 
@@ -108,7 +108,7 @@ performance over serial execution.
 
 ## Event System
 
-Hyperledger Sawtooth supports creating and broadcasting events. This
+Sawtooth supports creating and broadcasting events. This
 allows applications to:
 
 > -   Subscribe to events that occur related to the blockchain, such as
@@ -119,13 +119,6 @@ allows applications to:
 >     clients without storing that data in state.
 
 Subscriptions are submitted and serviced over a ZMQ Socket.
-
-## Ethereum Contract Compatibility with Seth
-
-The Sawtooth-Ethereum integration project, Seth, extends the
-interoperability of the Sawtooth platform to Ethereum. EVM (Ethereum
-Virtual Machine) smart contracts can be deployed to Sawtooth using the
-Seth transaction family.
 
 ## Dynamic Consensus Algorithms {#dynamic-consensus-label}
 
@@ -186,7 +179,7 @@ For more information, see
 [Transaction Family
 Specifications]({% link docs/1.1/transaction_family_specification/index.md %})
 
-# Real-world Application Examples
+# Application Examples
 
 > -   XO: Demonstrates how to construct basic transactions by playing
 >     [Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe). The XO
@@ -195,33 +188,10 @@ Specifications]({% link docs/1.1/transaction_family_specification/index.md %})
 >     more information, see [XO Transaction Family]({% link
 docs/1.1/app_developers_guide/intro_xo_transaction_family.md %}).
 >     role="doc"}.
-> -   Sawtooth Supply Chain: Demonstrates how to trace the provenance
->     and other contextual information of any asset. Supply Chain
->     provides an example application with a transaction processor,
->     custom REST API, and web app. This example application also
->     demonstrates a decentralized solution for in-browser transaction
->     signing, and illustrates how to synchronize the blockchain state
->     to a local database for complex queries. For more information, see
->     the [sawtooth-supply-chain repository on
->     GitHub](https://github.com/hyperledger/sawtooth-supply-chain).
-> -   Sawtooth Marketplace: Demonstrates how to exchange specific
->     quantities of customized assets with other users on the
->     blockchain. This example application contains a number of
->     components that, together with a Sawtooth validator, will run a
->     Sawtooth blockchain and provide a simple RESTful API to interact
->     with it. For more information, see the [sawtooth-marketplace
->     repository on
->     GitHub](https://github.com/hyperledger/sawtooth-marketplace).
-> -   Sawtooth Private UTXO: Demonstrates how assets can be created and
->     traded. This example application shows how to use SGX to allow for
->     assets to be transferred off ledger and privately traded, where
->     only the trading parties know the details of the transaction. For
->     more information, see the [sawtooth-private-utxo repository on
->     GitHub](https://github.com/hyperledger/sawtooth-private-utxo).
 
 # Getting Started with Application Development
 
-## Try Hyperledger Sawtooth
+## Try Sawtooth
 
 The Sawtooth documentation explains how to set up a local
 validator for demonstrating Sawtooth functionality and testing an
@@ -249,9 +219,7 @@ models.
 
 Sawtooth provides a REST API and SDKs in several languages - including
 Python, C++, Go, Java, JavaScript, and Rust - for development of
-applications which run on top of the Sawtooth platform. In addition, you
-can write smart contracts in Solidity for use with the Seth transaction
-family.
+applications which run on top of the Sawtooth platform.
 
 For more information, see [App Developers
 Guide]({% link docs/1.1/app_developers_guide/index.md %}),
@@ -273,7 +241,7 @@ The Sawtooth software is distributed as source code with an Apache
 license. You can get the code to start building your own distributed
 ledger.
 
-> -   [sawtooth-core](https://github.com/hyperledger/sawtooth-core):
+> -   [sawtooth-core](https://github.com/splintercommunity/sawtooth-core):
 >     Contains fundamental classes used throughout the Sawtooth project,
 >     as well as the following items:
 >     -   The implementation of the validator process which runs on each
@@ -283,22 +251,11 @@ ledger.
 >     -   Dockerfiles to support development or launching a network of
 >         validators
 >     -   Source files for this documentation
-> -   [Seth](https://github.com/hyperledger/sawtooth-seth): Deploy
->     Ethereum Virtual Machine (EVM) smart contracts to Sawtooth
-> -   [Sawtooth
->     Marketplace](https://github.com/hyperledger/sawtooth-marketplace):
->     Exchange customized \"Assets\" with other users on the blockchain
-> -   [Sawtooth Supply
->     Chain](https://github.com/hyperledger/sawtooth-supply-chain):
->     Trace the provenance and other contextual information of any asset
-> -   [Sawtooth Private
->     UTXO](https://github.com/hyperledger/sawtooth-private-utxo):
->     Create and trade assets, using SGX to allow assets to be
->     transferred off-ledger and traded privately
+
 
 ## Join the Sawtooth Community
 
-Sawtooth is an open source project under the Hyperledger umbrella. We
+Sawtooth is an open source project. We
 welcome working with individuals and companies interested in advancing
 distributed ledger technology. Please see
 [Community]({% link community/index.md %}) for ways to become a part of the
@@ -311,4 +268,4 @@ the OpenSSL Toolkit (<http://www.openssl.org/>).
 
 This project relies on other third-party components. For details, see
 the LICENSE and NOTICES files in the [sawtooth-core
-repository](https://github.com/hyperledger/sawtooth-core).
+repository](https://github.com/splintercommunity/sawtooth-core).
