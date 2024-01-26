@@ -44,7 +44,7 @@ Sawtooth batches.
 > implementation.
 
 For a full Python implementation see,  the [XO transaction
-family](https://github.com/hyperledger/sawtooth-sdk-python/tree/master/examples/xo_python)
+family](https://github.com/splintercommunity/sawtooth-sdk-python/tree/main/examples/xo_python)
 
 ## Prerequisites
 
@@ -630,7 +630,7 @@ return XO_NAMESPACE + \
 
 The process of encoding information to be submitted to a distributed
 ledger is generally non-trivial. A series of cryptographic safeguards
-are used to confirm identity and data validity. Hyperledger Sawtooth is
+are used to confirm identity and data validity. Sawtooth is
 no different, but the Python SDK does provide client
 functionality that abstracts away most of these details, and greatly
 simplifies the process of making changes to the blockchain.

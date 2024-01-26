@@ -152,7 +152,7 @@ reject the signature if it is anything other than 64 bytes.
 
 ### Transaction Family
 
-In Hyperledger Sawtooth, the set of possible transactions are defined by
+In Sawtooth, the set of possible transactions are defined by
 an extensible system called transaction families. Defining and
 implementing a new transaction family adds to the taxonomy of available
 transactions which can be applied. For example, in the language-specific

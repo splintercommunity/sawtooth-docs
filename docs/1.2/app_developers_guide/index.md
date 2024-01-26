@@ -2,7 +2,7 @@
 
 
 This guide describes how to develop applications which run on top of the
-Hyperledger Sawtooth core platform, primarily through the
+Sawtooth core platform, primarily through the
 use of Sawtooth's provided SDKs and `REST API`.
 
 Topics include an overview of Sawtooth transaction families setting up an

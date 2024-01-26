@@ -56,9 +56,9 @@ following transaction processors:
 >
 > These instructions have been tested on Ubuntu 18.04 (Bionic) only.
 
-## Installing Hyperledger Sawtooth
+## Installing Sawtooth
 
-This procedure describes how to install Hyperledger Sawtooth on a Ubuntu
+This procedure describes how to install Sawtooth on a Ubuntu
 system for proof-of-concept or production use in a Sawtooth network.
 
 1.  Choose whether you want the stable version (recommended) or the most
@@ -351,7 +351,7 @@ in the initial network.
 
         For the available settings and their default values, see
         \"On-Chain Settings\" in the [Sawtooth PBFT
-        documentation](https://sawtooth.hyperledger.org/docs/#sawtooth-pbft).
+        documentation]({% link docs/1.2/pbft/configuring-pbft.md %}#on-chain-settings-label)
 
     -   For PoET:
 
@@ -366,8 +366,8 @@ in the initial network.
         > **Note**
         >
         > This example shows the default PoET settings. For more
-        > information, see the [Hyperledger Sawtooth Settings
-        > FAQ](https://sawtooth.hyperledger.org/faq/settings/).
+        > information, see the [Sawtooth Settings
+        > FAQ](https://sawtooth.splinter.dev/faq/settings.html).
 
 7.  As the sawtooth user, combine the separate batches into a single
     genesis batch that will be committed in the genesis block.
@@ -1090,10 +1090,10 @@ have joined the network before continuing.
 
 > **Tip**
 >
-> For help with problems, see the [Hyperledger Sawtooth
+> For help with problems, see the [Sawtooth
 > FAQ]({% link faq/index.md %}) or ask a question on the
-> Hyperledger Chat [#sawtooth
-> channel](https://chat.hyperledger.org/channel/sawtooth).
+> Discord [#sawtooth
+> channel](https://discord.gg/fnUmDv7tSH).
 
 After verifying that Sawtooth is running correctly, you can continue
 with the optional configuration and customization steps that are

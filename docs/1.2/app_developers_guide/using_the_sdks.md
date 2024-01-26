@@ -8,19 +8,19 @@ development.
 The Sawtooth SDKs are in the following repositories:
 
 -   C++:
-    [hyperledger/sawtooth-sdk-cxx](https://github.com/hyperledger/sawtooth-sdk-cxx)
+    [splintercommunity/sawtooth-sdk-cxx](https://github.com/splintercommunity/sawtooth-sdk-cxx)
 -   Go:
-    [hyperledger/sawtooth-sdk-go](https://github.com/hyperledger/sawtooth-sdk-go)
+    [splintercommunity/sawtooth-sdk-go](https://github.com/splintercommunity/sawtooth-sdk-go)
 -   Java:
-    [hyperledger/sawtooth-sdk-java](https://github.com/hyperledger/sawtooth-sdk-java)
+    [splintercommunity/sawtooth-sdk-java](https://github.com/splintercommunity/sawtooth-sdk-java)
 -   JavaScript:
-    [hyperledger/sawtooth-sdk-javascript](https://github.com/hyperledger/sawtooth-sdk-javascript)
+    [splintercommunity/sawtooth-sdk-javascript](https://github.com/splintercommunity/sawtooth-sdk-javascript)
 -   Python:
-    [hyperledger/sawtooth-sdk-python](https://github.com/hyperledger/sawtooth-sdk-python)
+    [splintercommunity/sawtooth-sdk-python](https://github.com/splintercommunity/sawtooth-sdk-python)
 -   Rust:
-    [hyperledger/sawtooth-sdk-rust](https://github.com/hyperledger/sawtooth-sdk-rust)
+    [splintercommunity/sawtooth-sdk-rust](https://github.com/splintercommunity/sawtooth-sdk-rust)
 -   Swift:
-    [hyperledger/sawtooth-sdk-swift](https://github.com/hyperledger/sawtooth-sdk-swift)
+    [splintercommunity/sawtooth-sdk-swift](https://github.com/splintercommunity/sawtooth-sdk-swift)
 
 The following table summarizes the Sawtooth SDKs. It shows the feature
 completeness, API stability, and maturity level for the client signing,

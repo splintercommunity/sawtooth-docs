@@ -23,7 +23,7 @@ with restricted membership. It has the following requirements:
   - The PBFT consensus engine name is `pbft`.
   - The version number is in the file `sawtooth-pbft/Cargo.toml`
     (see the
-    [sawtooth-pbft](https://github.com/hyperledger/sawtooth-pbft/)
+    [sawtooth-pbft](https://github.com/splintercommunity/sawtooth-pbft/)
     repository) as `version = "{major}.{minor}.{patch}"`. Use only
     the first two digits (major and minor release numbers); omit the
     patch number. For example, if the version is 1.0.4, use `1.0`
@@ -33,7 +33,7 @@ with restricted membership. It has the following requirements:
   information, see [PBFT On Chain Settings]({% link
   docs/1.2/pbft/configuring-pbft.md %}#on-chain-settings-label).
 
-For the procedure to configure PBFT, see the Hyperledger Sawtooth
+For the procedure to configure PBFT, see the Sawtooth
 documentation:
 
 - Developers: [Creating a Sawtooth

@@ -1,6 +1,6 @@
 # Setting Up a Sawtooth Node for Testing
 
-Before you can start developing for the *Hyperledger Sawtooth* platform,
+Before you can start developing for the *Sawtooth* platform,
 you'll need to set up a local Sawtooth node to test your application
 against. Once the node is running, you will be able to submit new
 transactions and fetch the resulting state and block data from the
@@ -26,7 +26,7 @@ To get started, choose the guide for the platform of your choice.
 
 ## Using Docker for a Single Sawtooth Node
 
-This procedure explains how to set up Hyperledger Sawtooth for
+This procedure explains how to set up Sawtooth for
 application development using a multi-container Docker environment. It
 shows you how to start Sawtooth and connect to the necessary Docker
 containers, then walks you through the following tasks:
@@ -115,7 +115,7 @@ client commands.
 ### Step 1: Download the Sawtooth Docker Compose File
 
 Download the Docker Compose file for the Sawtooth environment,
-[sawtooth-default.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/compose/sawtooth-default.yaml).
+[sawtooth-default.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/compose/sawtooth-default.yaml).
 
 This example Compose file defines the process for constructing a simple
 Sawtooth environment with following containers:
@@ -630,7 +630,7 @@ for any reason.
 
 ## Using Kubernetes for a Single Sawtooth Node
 
-This procedure explains how to create a single Hyperledger Sawtooth
+This procedure explains how to create a single Sawtooth
 validator node with
 [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/).
 This environment uses
@@ -804,7 +804,7 @@ Minikube](https://kubernetes.io/docs/setup/minikube/).
 
 Download the Kubernetes configuration file for a single-node
 environment:
-[sawtooth-kubernetes-default.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default.yaml).
+[sawtooth-kubernetes-default.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default.yaml).
 
 This file defines the process for constructing a one-node Sawtooth
 environment with following containers:
@@ -1323,7 +1323,7 @@ Use the following commands to stop and reset the Sawtooth environment.
 
 ## Using Ubuntu for a Single Sawtooth Node
 
-This procedure explains how to set up Hyperledger Sawtooth for
+This procedure explains how to set up Sawtooth for
 application development on Ubuntu 18.04 (Bionic). It shows you how to
 install Sawtooth on Ubuntu, then walks you through the following tasks:
 
@@ -1568,7 +1568,7 @@ Use the same terminal window as the previous step.
     output will be similar to this truncated example:
 
     ``` console
-    [2018-03-14 15:53:34.909 INFO     cli] sawtooth-validator (Hyperledger Sawtooth) version 1.0.1
+    [2018-03-14 15:53:34.909 INFO     cli] sawtooth-validator (Sawtooth) version 1.0.1
     [2018-03-14 15:53:34.909 INFO     path] Skipping path loading from non-existent config file: /etc/sawtooth/path.toml
     [2018-03-14 15:53:34.910 INFO     validator] Skipping validator config loading from non-existent config file: /etc/sawtooth/validator.toml
     [2018-03-14 15:53:34.911 INFO     keys] Loading signing key: /home/username/.sawtooth/keys/my_key.priv

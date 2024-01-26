@@ -5,7 +5,7 @@
 > These instructions have been tested on Ubuntu 18.04 (Bionic) only.
 
 This section describes the validator and transactor permissions in
-Hyperledger Sawtooth.
+Sawtooth.
 
 -   [Transactor key permissioning](#transactor-key-permissioning-label)
     controls who (which users and clients) can submit transactions and batches

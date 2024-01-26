@@ -29,7 +29,7 @@ The XO transaction family includes:
 
 > -   Transaction processors in several languages, including Go
 >     (`xo-tp-go`),
->     [JavaScript](https://github.com/hyperledger/sawtooth-sdk-javascript/blob/master/examples/xo/),
+>     [JavaScript](https://github.com/splintercommunity/sawtooth-sdk-javascript/blob/master/examples/xo/),
 >     and Python (`xo-tp-python`). These transaction processors
 >     implement the business logic of XO game play.
 > -   An `xo` client: A set of commands that provide a command-line

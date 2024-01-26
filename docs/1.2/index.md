@@ -6,7 +6,7 @@
 > information, see the [conversion status]({%
 link docs/1.2/conversion_status.md %}).
 
-Hyperledger Sawtooth is an enterprise blockchain platform for building
+Sawtooth is an enterprise blockchain platform for building
 distributed ledger applications and networks. The design philosophy
 targets keeping ledgers *distributed* and making smart contracts *safe*,
 particularly for enterprise use.
@@ -23,7 +23,7 @@ Sawtooth\'s core design allows applications to choose the transaction
 rules, permissioning, and consensus algorithms that support their unique
 business needs.
 
-Sawtooth is an open source project under the Hyperledger umbrella. For
+Sawtooth is an open source project. For
 information on how to contribute, see [Join the Sawtooth
 Community](#join-the-sawtooth-community).
 
@@ -108,7 +108,7 @@ performance over serial execution.
 
 ## Event System
 
-Hyperledger Sawtooth supports creating and broadcasting events. This
+Sawtooth supports creating and broadcasting events. This
 allows applications to:
 
 > -   Subscribe to events that occur related to the blockchain, such as
@@ -119,13 +119,6 @@ allows applications to:
 >     clients without storing that data in state.
 
 Subscriptions are submitted and serviced over a ZMQ Socket.
-
-## Ethereum Contract Compatibility with Seth
-
-The Sawtooth-Ethereum integration project, Seth, extends the
-interoperability of the Sawtooth platform to Ethereum. EVM (Ethereum
-Virtual Machine) smart contracts can be deployed to Sawtooth using the
-Seth transaction family.
 
 ## Dynamic Consensus {#dynamic-consensus-label}
 
@@ -181,10 +174,6 @@ for these algorithms:
 >         simulator is also called \"PoET/CFT\" because it is crash
 >         fault tolerant, not Byzantine fault tolerant.
 >
-> -   [Sawtooth Raft]({% link docs/1.2/raft/index.md %}) is a
->     leader-based consensus algorithm that provides crash fault
->     tolerance for a small network with restricted membership.
->
 > -   Devmode (short for \"developer mode\") is a simplified
 >     random-leader algorithm that is useful for developing and testing
 >     a transaction processor. Devmode is not recommended for multi-node
@@ -219,23 +208,19 @@ Additional transaction families provide models for specific areas:
 > -   BlockInfo - Provides a methodology for storing information about a
 >     configurable number of historic blocks.
 
-Other Hyperledger projects provide smart-contract functionality for the
+Other projects provide smart-contract functionality for the
 Sawtooth platform:
 
 > -   [Sawtooth
 >     Sabre]({% link docs/1.2/sabre/index.md %})
 >     -Implements on-chain smart contracts that are executed in a
 >     WebAssembly (WASM) virtual machine.
-> -   [Sawtooth
->     Seth]({% link docs/1.2/seth/index.md %})
->     -Supports running Ethereum Virtual Machine (EVM) smart contracts
->     on Sawtooth
 
 For more information, see
 [Transaction Family
 Specifications]({% link docs/1.2/transaction_family_specifications/index.md %})
 
-# Real-world Application Examples
+# Application Examples
 
 > -   XO: Demonstrates how to construct basic transactions by playing
 >     [Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe). The XO
@@ -243,27 +228,10 @@ Specifications]({% link docs/1.2/transaction_family_specifications/index.md %})
 >     `xo` command that allows two participants to play the game. For
 >     more information, see [XO Transaction Family]({% link
       docs/1.2/app_developers_guide/intro_xo_transaction_family.md %}).
-> -   Sawtooth Supply Chain: Demonstrates how to trace the provenance
->     and other contextual information of any asset. Supply Chain
->     provides an example application with a transaction processor,
->     custom REST API, and web app. This example application also
->     demonstrates a decentralized solution for in-browser transaction
->     signing, and illustrates how to synchronize the blockchain state
->     to a local database for complex queries. For more information, see
->     the [sawtooth-supply-chain repository on
->     GitHub](https://github.com/hyperledger/sawtooth-supply-chain).
-> -   Sawtooth Marketplace: Demonstrates how to exchange specific
->     quantities of customized assets with other users on the
->     blockchain. This example application contains a number of
->     components that, together with a Sawtooth validator, will run a
->     Sawtooth blockchain and provide a simple RESTful API to interact
->     with it. For more information, see the [sawtooth-marketplace
->     repository on
->     GitHub](https://github.com/hyperledger/sawtooth-marketplace).
 
 # Getting Started with Application Development
 
-## Try Hyperledger Sawtooth
+## Try Sawtooth
 
 The Sawtooth documentation explains how to set up a local
 validator for demonstrating Sawtooth functionality and testing an application.
@@ -291,9 +259,7 @@ models.
 
 Sawtooth provides a REST API and SDKs in several languages - including
 Python, C++, Go, Java, JavaScript, and Rust - for development of
-applications which run on top of the Sawtooth platform. In addition, you
-can write smart contracts in Solidity for use with the Seth transaction
-family.
+applications which run on top of the Sawtooth platform.
 
 For more information, see [App Developers
 Guide]({% link docs/1.2/app_developers_guide/index.md %}),
@@ -315,7 +281,7 @@ The Sawtooth software is distributed as source code with an Apache
 license. You can get the code to start building your own distributed
 ledger.
 
-> -   [sawtooth-core](https://github.com/hyperledger/sawtooth-core):
+> -   [sawtooth-core](https://github.com/splintercommunity/sawtooth-core):
 >     Contains fundamental classes used throughout the Sawtooth project,
 >     as well as the following items:
 >     -   The implementation of the validator process which runs on each
@@ -325,29 +291,20 @@ ledger.
 >     -   Dockerfiles to support development or launching a network of
 >         validators
 >     -   Source files for this documentation
-> -   [Sawtooth PBFT](https://github.com/hyperledger/sawtooth-pbft): Use
+> -   [Sawtooth PBFT](https://github.com/splintercommunity/sawtooth-pbft): Use
 >     PBFT consensus with Sawtooth
-> -   [Sawtooth PoET](https://github.com/hyperledger/sawtooth-poet): Use
+> -   [Sawtooth PoET](https://github.com/splintercommunity/sawtooth-poet): Use
 >     PoET consensus with Sawtooth
-> -   [Sawtooth Sabre](https://github.com/hyperledger/sawtooth-sabre):
+> -   [Sawtooth Sabre](https://github.com/splintercommunity/sawtooth-sabre):
 >     Run on-chain smart contracts executed in a WebAssembly virtual
 >     machine
-> -   [Sawtooth Seth](https://github.com/hyperledger/sawtooth-seth):
->     Deploy Ethereum Virtual Machine (EVM) smart contracts to Sawtooth
-> -   [Sawtooth
->     Marketplace](https://github.com/hyperledger/sawtooth-marketplace):
->     Exchange customized \"assets\" with other users on the blockchain
-> -   [Sawtooth Supply
->     Chain](https://github.com/hyperledger/sawtooth-supply-chain):
->     Trace the provenance and other contextual information of any asset
 
 ## Join the Sawtooth Community
 
-Sawtooth is an open source project under the Hyperledger umbrella. We
-welcome working with individuals and companies interested in advancing
-distributed ledger technology. Please see
-[Community]({% link community/index.md %})
-for ways to become a part of the Sawtooth community.
+Sawtooth is an open source project. We welcome working with individuals and
+companies interested in advancing distributed ledger technology. Please see
+[Community]({% link community/index.md %}) or ways to become a part of the
+Sawtooth community.
 
 # Acknowledgements
 
@@ -356,4 +313,4 @@ the OpenSSL Toolkit (<http://www.openssl.org/>).
 
 This project relies on other third-party components. For details, see
 the LICENSE and NOTICES files in the [sawtooth-core
-repository](https://github.com/hyperledger/sawtooth-core).
+repository](https://github.com/splintercommunity/sawtooth-core).

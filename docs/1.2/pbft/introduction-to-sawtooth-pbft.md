@@ -1,6 +1,6 @@
 # Introduction
 
-Sawtooth PBFT is a consensus engine for Hyperledger Sawtooth that
+Sawtooth PBFT is a consensus engine for Sawtooth that
 provides practical Byzantine fault tolerance.
 
 PBFT is a voting-based consensus algorithm that is:
@@ -43,8 +43,6 @@ seal* to verify block finality.
 > - "Secondary" is synonymous with "follower" and "backup"
 > - "Node" is synonymous with "server" and "replica"
 
-For implementation details, see the [rustdoc for Sawtooth
-PBFT](https://sawtooth.hyperledger.org/docs/pbft/nightly/master/pbft_doc/pbft_engine/index.html).
 
 <!--
   Licensed under Creative Commons Attribution 4.0 International License

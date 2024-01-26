@@ -5,7 +5,7 @@
 > PoET-SGX is currently not compatible with Sawtooth 1.1 or later. Users
 > looking to leverage PoET-SGX should remain on Sawtooth 1.0.
 
-This procedure describes how to install, configure, and run Hyperledger
+This procedure describes how to install, configure, and run
 Sawtooth with PoET simulator consensus on a system with Intel ® Software
 Guard Extensions (SGX).
 
@@ -31,7 +31,7 @@ docs/1.2/sysadmin_guide/setting_up_sawtooth_network.md %}).
 > **Important**
 >
 > You may need to update your BIOS with a security fix before running
-> Hyperledger Sawtooth with PoET. Affected versions and instructions for
+> Sawtooth with PoET. Affected versions and instructions for
 > updating can be found on [Intel\'s
 > website](https://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-00076&languageid=en-fr).
 > If you\'re running an affected version, you must update the BIOS to
@@ -336,7 +336,7 @@ Add the following content to the file:
 
 ```ini
 #
-# Hyperledger Sawtooth -- Validator Configuration
+# Sawtooth -- Validator Configuration
 #
 
 # This file should exist in the defined config directory and allows

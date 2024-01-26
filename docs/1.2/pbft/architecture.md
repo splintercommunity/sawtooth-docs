@@ -161,7 +161,7 @@ consensus API, such as `BlockNew` and `BlockCommit`. These messages are
 called "updates" to distinguish them from the PBFT-specific messages.
 For more information on the consensus API's `Update` messages, see the
 [Consensus API
-RFC](https://github.com/hyperledger/sawtooth-rfcs/blob/master/text/0004-consensus-api.md#updates).
+RFC](https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0004-consensus-api.md#updates).
 
 ```protobuf
 // Represents all common information used in a PBFT message

@@ -44,7 +44,7 @@ You can add several nodes at the same time.
    block catch-up procedure, where it receives and commits the blocks
    that are already on the blockchain. (For details, see the [PBFT node
    catch-up
-   RFC](https://github.com/hyperledger/sawtooth-rfcs/blob/master/text/0031-pbft-node-catchup.md).)
+   RFC](https://github.com/splintercommunity/sawtooth-rfcs/blob/master/text/0031-pbft-node-catchup.md).)
 
 3. Wait for the node to catch up to the rest of the network (get within
    a few blocks of the chain head). If the new node becomes a PBFT
