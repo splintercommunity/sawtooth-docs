@@ -1,3 +1,4 @@
+# Copyright 2024 Bitwise IO, Inc.
 # Copyright 2021 Cargill Incorporated
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,8 +16,8 @@
 repository:
   # See https://developer.github.com/v3/repos/#edit for all available settings.
   name: sawtooth-docs
-  description: Source files for the Hyperledger Sawtooth website
-  homepage: https://wiki.hyperledger.org/display/sawtooth
+  description: Source files for the Sawtooth website
+  homepage: https://sawtooth.splinter.dev/
   private: false
   has_issues: true
   has_projects: false
