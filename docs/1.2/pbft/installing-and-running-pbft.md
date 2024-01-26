@@ -9,7 +9,7 @@ installed.
 1. Clone the PBFT repository.
 
     ```console
-    $ git clone https://github.com/hyperledger/sawtooth-pbft.git
+    $ git clone https://github.com/splintercommunity/sawtooth-pbft.git
     ```
 
 2. Run the following commands to install the dependencies for PBFT and

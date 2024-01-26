@@ -29,11 +29,11 @@ store the metrics data.
     state
 
 -   Download the
-    [hyperledger/sawtooth-core](https://github.com/hyperledger/sawtooth-core)
+    [splintercommunity/sawtooth-core](https://github.com/splintercommunity/sawtooth-core)
     repository from GitHub with this command:
 
     ``` console
-    $ git clone https://github.com/hyperledger/sawtooth-core.git
+    $ git clone https://github.com/splintercommunity/sawtooth-core.git
     ```
 
 ## Set Up InfluxDB
@@ -130,7 +130,7 @@ InfluxDB is used to store Sawtooth metrics data.
     a.  To get the 1.0 dashboard, either find it in the `1-0` branch at
         `sawtooth-core/docker/grafana/dashboards/sawtooth_performance.json`
         or download
-        [`sawtooth_performance.json`](https://raw.githubusercontent.com/hyperledger/sawtooth-core/1-0/docker/grafana/dashboards/sawtooth_performance.json)
+        [`sawtooth_performance.json`](https://raw.githubusercontent.com/splintercommunity/sawtooth-core/1-0/docker/grafana/dashboards/sawtooth_performance.json)
         from GitHub.
 
     b.  Click on the Grafana spiral logo and mouse over \"Dashboards\",

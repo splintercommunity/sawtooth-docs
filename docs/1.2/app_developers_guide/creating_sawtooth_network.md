@@ -39,9 +39,7 @@ the network.
 >
 > The example environment includes the Sawtooth REST API on all validator
 > nodes. However, an application could provide a custom REST API (or no
-> REST API). See [Sawtooth Supply
-> Chain](https://github.com/hyperledger/sawtooth-supply-chain) for an
-> example of a custom REST API.
+> REST API).
 >
 > This environment also runs a consensus engine on each node. The
 > consensus engine could run on a separate system, as long as it is
@@ -199,9 +197,9 @@ access those settings when they join the network.
 Download the Docker Compose file for a multiple-node network.
 
 -   For PBFT, download
-    [sawtooth-default-pbft.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/compose/sawtooth-default-pbft.yaml)
+    [sawtooth-default-pbft.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/compose/sawtooth-default-pbft.yaml)
 -   For PoET, download
-    [sawtooth-default-poet.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/compose/sawtooth-default-poet.yaml)
+    [sawtooth-default-poet.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/compose/sawtooth-default-poet.yaml)
 
 ### Step 2: Start the Sawtooth Network
 
@@ -699,9 +697,9 @@ Download the Kubernetes configuration (kubeconfig) file for a Sawtooth
 network.
 
 -   For PBFT, download
-    [sawtooth-kubernetes-default-pbft.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default-pbft.yaml)
+    [sawtooth-kubernetes-default-pbft.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default-pbft.yaml)
 -   For PoET, download
-    [sawtooth-kubernetes-default-poet.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default-poet.yaml)
+    [sawtooth-kubernetes-default-poet.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default-poet.yaml)
 
 The kubeconfig file creates a Sawtooth network with five pods, each
 running a Sawtooth node. It also specifies the container images to
@@ -725,8 +723,8 @@ starts.
 
 2.  Download the following files:
 
-    -   [sawtooth-create-pbft-keys.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-create-pbft-keys.yaml)
-    -   [pbft-keys-configmap.yaml](https://github.com/hyperledger/sawtooth-core/blob/1-2/docker/kubernetes/pbft-keys-configmap.yaml)
+    -   [sawtooth-create-pbft-keys.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/kubernetes/sawtooth-kubernetes-default-poet.yaml)
+    -   [pbft-keys-configmap.yaml](https://github.com/splintercommunity/sawtooth-core/blob/1-2/docker/kubernetes/pbft-keys-configmap.yaml)
 
     Save these files in the same directory where you saved
     `sawtooth-kubernetes-default-pbft.yaml...` (in the previous step).
@@ -1429,7 +1427,7 @@ Reference](http://api.zeromq.org/4-2:zmq-tcp).
 
 ### Step 1: Install Sawtooth on All Nodes
 
-Use these steps on each system to install Hyperledger Sawtooth.
+Use these steps on each system to install Sawtooth.
 
 > **Note**
 >
@@ -1754,7 +1752,7 @@ in the initial network.
         >
         >
         > This example shows the default PoET settings. For more
-        > information, see the [Hyperledger Sawtooth Settings
+        > information, see the [Sawtooth Settings
         > FAQ]({% link faq/settings.md%}).
 
 7.  As the sawtooth user, combine the separate batches into a single

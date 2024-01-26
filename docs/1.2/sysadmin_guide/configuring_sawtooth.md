@@ -544,7 +544,7 @@ the configuration file.
 
 An example configuration file is in the `sawtooth-sdk-python` repository
 at
-`https://github.com/hyperledger/sawtooth-sdk-python/blob/master/examples/xo_python/packaging/xo.toml.example`.
+`https://github.com/splintercommunity/sawtooth-sdk-python/blob/master/examples/xo_python/packaging/xo.toml.example`.
 To create a XO transaction processor configuration file, download this
 example file to the config directory and name it `xo.toml`. Set the
 ownership and permissions to owner `root`, group `sawtooth`, and

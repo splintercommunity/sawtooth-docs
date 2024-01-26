@@ -1,10 +1,9 @@
 # Architecture Guide
 
-
 The following diagram shows a high-level view of the Sawtooth
 architecture.
 
-This guide describes the design and architecture of Hyperledger
+This guide describes the design and architecture of
 Sawtooth, an enterprise blockchain platform for building distributed
 ledger applications and networks.
 

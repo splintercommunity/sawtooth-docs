@@ -5,7 +5,7 @@ want to receive information on events such as the creation of a new
 block or switching to a new fork. This includes application-specific
 events that are defined by a custom transaction family.
 
-Hyperledger Sawtooth supports creating and broadcasting events. Event
+Sawtooth supports creating and broadcasting events. Event
 subscription allows an application to perform the following functions:
 
 -   Subscribe to events that occur related to the blockchain
@@ -18,12 +18,7 @@ An application can react immediately to each event or store event data
 for later processing and analysis. For example, a
 [state delta processor](#sawtoothstate-delta) could store state data in a
 reporting database for analysis and processing, which provides access to state
-information without the delay of requesting state data from the validator. For
-examples, see the [Sawtooth Supply
-Chain](https://github.com/hyperledger/sawtooth-supply-chain) or
-[Sawtooth
-Marketplace](https://github.com/hyperledger/sawtooth-marketplace)
-repository.
+information without the delay of requesting state data from the validator.
 
 This section describes the structure of events and event subscriptions,
 then explains how to use the validator's [ZeroMQ](http://zeromq.org)
@@ -337,7 +332,7 @@ WebSockets]({% link docs/1.2/rest_api/state_delta_websockets.md%}).
 
 ## Using ZMQ to Subscribe to Events
 
-Client applications can subscribe to Hyperledger Sawtooth events using
+Client applications can subscribe to Sawtooth events using
 the validator\'s [ZMQ](http://zeromq.org) messaging protocol. The
 general subscription process is as follows:
 

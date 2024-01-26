@@ -69,7 +69,7 @@ following command-line options:
 ## PBFT On-Chain Settings {#on-chain-settings-label}
 
 Sawtooth PBFT includes on-chain settings for network-wide configuration
-on a Hyperledger Sawtooth network. These settings affect how the whole
+on a Sawtooth network. These settings affect how the whole
 network operates, so it is desirable that they be the same on all nodes.
 The [Settings transaction
 processor]({% link

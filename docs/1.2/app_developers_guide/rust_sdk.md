@@ -35,7 +35,7 @@ implements XO, a distributed version of the two-player game
 
 
 For a full Rust implementation see the [XO transaction
-family](https://github.com/hyperledger/sawtooth-sdk-rust/tree/master/examples/xo_rust)
+family](https://github.com/splintercommunity/sawtooth-sdk-rust/tree/main/examples/xo_rust)
 
 
 ## Prerequisites
@@ -68,7 +68,7 @@ Sawtooth in Rust.
 1.  Add Sawtooth to your `Cargo.toml` file. Add sawtooth-sdk with the
     appropriate version to the dependencies section. The Rust SDK is
     located in the Sawtooth SDK Rust repository
-    <http://github.com/hyperledger/sawtooth-sdk-rust>.
+    <http://github.com/splintercommunity/sawtooth-sdk-rust>.
 
 ```ini
 [package]
@@ -142,7 +142,7 @@ fn main() {
 >
 > If you\'re looking for a working implementation of an XO transaction
 > processor in Rust, check out the [xo_rust
-> example](https://github.com/hyperledger/sawtooth-sdk-rust/tree/master/examples/xo_rust)
+> example](https://github.com/splintercommunity/sawtooth-sdk-rust/tree/main/examples/xo_rust)
 > in the Rust SDK repository.
 
 
@@ -690,7 +690,7 @@ pub fn calculate_address(name: &str) -> String {
 
 The process of encoding information to be submitted to a distributed
 ledger is generally non-trivial. A series of cryptographic safeguards
-are used to confirm identity and data validity. Hyperledger Sawtooth is
+are used to confirm identity and data validity. Sawtooth is
 no different, but the Rust SDK does provide client
 functionality that abstracts away most of these details, and greatly
 simplifies the process of making changes to the blockchain.

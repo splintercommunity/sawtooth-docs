@@ -1,6 +1,6 @@
 # Glossary
 
-This glossary defines Hyperledger Sawtooth terms and concepts.
+This glossary defines Sawtooth terms and concepts.
 
 batch
 
@@ -170,16 +170,6 @@ PoET consensus
     system without a Trusted Execution Environment. PoET simulator
     is also called *PoET/CFT* because it is crash fault tolerant,
     not Byzantine fault tolerant.
-
-Raft consensus
-
-: Leader-based consensus algorithm that is designed for small networks
-  with a restricted membership. Raft is crash fault tolerant, not
-  Byzantine fault tolerant, and has finality (does not fork). For more
-  information, see [Raft (computer science) on
-  Wikipedia](https://en.wikipedia.org/wiki/Raft_(computer_science))
-  and the [Sawtooth Raft
-  documentation](https://sawtooth.hyperledger.org/docs/raft/nightly/master/introduction.html).
 
 REST API
 

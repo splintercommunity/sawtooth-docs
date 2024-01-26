@@ -68,19 +68,13 @@ available in the `sawtooth-core` repository unless noted below.
     The family name is `xo`. The transaction processor is
     `xo-tp-{language}`.
 
-The following transaction families run on top of the Sawtooth platform:
+The following transaction family runs on top of the Sawtooth platform:
 
 -   [Sawtooth Sabre Transaction
     Family]({% link docs/1.2/sabre/sabre_transaction_family.md%}):
     Implements on-chain smart contracts that are executed in a
     WebAssembly (WASM) virtual machine. This transaction family is in
-    the [sawtooth-sabre](https://github.com/hyperledger/sawtooth-sabre)
-    repository.
--   [Sawtooth Seth Transaction
-    Family](https://sawtooth.hyperledger.org/docs/seth/nightly/master/):
-    Supports running Ethereum Virtual Machine (EVM) smart contracts on
-    Sawtooth. This transaction family is in the
-    [sawtooth-seth](https://github.com/hyperledger/sawtooth-seth)
+    the [sawtooth-sabre](https://github.com/splintercommunity/sawtooth-sabre)
     repository.
 
 <!--
