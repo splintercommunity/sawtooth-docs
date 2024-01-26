@@ -1,4 +1,5 @@
 <!--
+ Copyright (c) 2024 Bitwise IO, Inc.
  Copyright (c) 2015-2017, Intel Corporation.
  Copyright (c) 2020, Walmart Inc.
  Licensed under Creative Commons Attribution 4.0 International License
@@ -16,5 +17,3 @@ For help topics, we recommend joining us on Chat (link below).
 - [Issue Tracker](./issue_tracking.html)
 
 - [Contribute](./contributing.html)
-
-- [Code of Conduct](./code_of_conduct.html)

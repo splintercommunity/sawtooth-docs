@@ -1,4 +1,5 @@
 <!--
+ Copyright (c) 2024 Bitwise IO, Inc.
  Copyright (c) 2015-2017, Intel Corporation.
  Copyright (c) 2020, Walmart Inc.
  Copyright 2022 Cargill Incorporated
@@ -14,20 +15,20 @@ the issue.
 
 ## Github Issues
 
-Hyperledger Sawtooth uses Github Issues as our issue tracking system. The
+Sawtooth uses Github Issues as our issue tracking system. The
 issues are tied to the repository in which the related code resides. For
 example:
 
-* [sawtooth-core](https://github.com/hyperledger/sawtooth-core/issues) - Issues
-    related to the validator, REST API, etc.
-* [sawtooth-docs](https://github.com/hyperledger/sawtooth-docs/issues) - Issues
-    related to content on the website.
+* [sawtooth-core](https://github.com/splintercommunity/sawtooth-core/issues) -
+Issues related to the validator, REST API, etc.
+* [sawtooth-docs](https://github.com/splintercommunity//sawtooth-docs/issues) -
+Issues related to content on the website.
 
 ## How to Report an Issue
 
 To report issues, find the related Sawtooth GitHub repository and open an issue
 there.  If in doubt, open an issue against the
-[sawtooth-core](https://github.com/hyperledger/sawtooth-core/issues)
+[sawtooth-core](https://github.com/splintercommunity//sawtooth-core/issues)
 repository.
 
 When reporting an issue, please provide as much detail as possible about how

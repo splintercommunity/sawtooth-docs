@@ -1,4 +1,5 @@
 <!--
+ Copyright (c) 2024 Bitwise IO, Inc.
  Copyright (c) 2015-2017, Intel Corporation.
  Copyright (c) 2020, Walmart Inc.
  Licensed under Creative Commons Attribution 4.0 International License
@@ -7,10 +8,10 @@
 
 # Contributing
 
-## Ways to Contribute to Hyperledger Sawtooth
+## Ways to Contribute to Sawtooth
 
 Contributions from the development community help improve the capabilities of
-Hyperledger Sawtooth. These contributions are the most effective way to
+Sawtooth. These contributions are the most effective way to
 make a positive impact on the project.
 
 Ways you can contribute:
@@ -21,15 +22,15 @@ Ways you can contribute:
 * Tests for events and results: Add functional, performance, or scalability
   tests
 
-Hyperledger Sawtooth issues can be found in
+Sawtooth issues can be found in
 [Github Issues](issue_tracking).  Any unassigned items
 are probably still open. When in doubt, ask on Discord about a specific
 issue (see [Joining the Discussion](./join_the_discussion.html)).
 
 ## The Commit Process
 
-Hyperledger Sawtooth is Apache 2.0 licensed and accepts contributions
-via [GitHub](https://github.com/hyperledger/sawtooth-core)
+Sawtooth is Apache 2.0 licensed and accepts contributions
+via [GitHub](https://github.com/splintercommunity/sawtooth-core)
 pull requests. When contributing code, please follow these guidelines:
 
 * Fork the repository and make your changes in a feature branch
