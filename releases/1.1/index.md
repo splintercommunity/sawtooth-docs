@@ -1,15 +1,15 @@
-# Hyperledger Sawtooth 1.1 (Bumper)
+# Sawtooth 1.1 (Bumper)
 <!--
-  Copyright (c) 2018 Bitwise IO, Inc.
+  Copyright (c) 2018-2024 Bitwise IO, Inc.
   Licensed under Creative Commons Attribution 4.0 International License
   https://creativecommons.org/licenses/by/4.0/
 -->
 
-Hyperledger Sawtooth 1.1 (Bumper) is now available. See the
-[documentation](https://sawtooth.hyperledger.org/docs/core/releases/1.1/) to
+Sawtooth 1.1 (Bumper) is now available. See the
+[documentation](https://sawtooth.splinter.dev/docs/1.1/) to
 get started.
 
-This page describes the new and changed features in Hyperledger
+This page describes the new and changed features in
 Sawtooth 1.1 (since release 1.0).
 
 ## Core Sawtooth Components
@@ -17,12 +17,11 @@ Sawtooth 1.1 (since release 1.0).
 ### New Features
 
 - The consensus API has been completely redesigned. Consensus has been moved to
-  a separate process, called a “consensus engine”. See [Hyperledger Sawtooth
+  a separate process, called a “consensus engine”. See [Sawtooth
   Consensus](#consensus) for more details.
 - State pruning is now supported at a configurable block horizon. This helps
   limit the total storage requirements for global state by removing historic
-  state after the configured horizon. Check out the [state pruning
-  RFC](https://github.com/hyperledger/sawtooth-rfcs/pull/8) for more details.
+  state after the configured horizon.
 - Several example transaction processors have been rewritten in Rust, including
   IntegerKey (intkey), XO, and Smallbank.
 - A new `/status` endpoint and `sawtooth status show` command are available to
@@ -87,16 +86,17 @@ Sawtooth 1.1 (since release 1.0).
   `sawtooth.consensus.algorithm.name` and `sawtooth.consensus.algorithm.version`
   to set the name and version of the consensus engine.
 - All SDKs except Rust and Python have been moved from sawtooth-core to
-  [separate repositories](https://github.com/hyperledger?utf8=%E2%9C%93&q=sawtooth-sdk&type=&language=).
-- PoET has been moved to [a new repository](https://github.com/hyperledger/sawtooth-poet).
+  [separate repositories](https://github.com/splintercommunity?utf8=%E2%9C%93&q=sawtooth-sdk&type=&language=).
+- PoET has been moved to [a new repository](https://github.com/splintercommunity/sawtooth-poet).
 
 ## Consensus
 
-Hyperledger Sawtooth 1.1 includes a new consensus interface that enables
+Sawtooth 1.1 includes a new consensus interface that enables
 features like language independence for consensus algorithms. Consensus
 protocols are now implemented as separate processes called “consensus engines",
 which enables more consensus options for Sawtooth. Check out the [consensus API
-RFC](https://github.com/hyperledger/sawtooth-rfcs/pull/4) for more details.
+RFC](https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0004-consensus-api.md)
+for more details.
 
 - The network deployment tools have been updated to launch the consensus
   processes. If you have made your own custom launch scripts, note that the
@@ -105,12 +105,12 @@ RFC](https://github.com/hyperledger/sawtooth-rfcs/pull/4) for more details.
   docker-compose files for reference.
 - This release includes the following consensus engines based on the new
   consensus API:
-  - [PoET consensus engine](https://github.com/hyperledger/sawtooth-poet), a
+  - [PoET consensus engine](https://github.com/splintercommunity/sawtooth-poet), a
     refactored version of the previous PoET consensus module.
   - Dev mode consensus engine, based on the previous dev mode consensus module.
-  - New [PBFT consensus engine](https://github.com/hyperledger/sawtooth-pbft),
+  - New [PBFT consensus engine](https://github.com/splintercommunity/sawtooth-pbft),
     based on the Practical Byzantine Fault Tolerance (PBFT) consensus algorithm.
-  - New [Raft consensus engine](https://github.com/hyperledger/sawtooth-raft),
+  - New [Raft consensus engine](https://github.com/splintercommunity/sawtooth-raft),
     based on the Raft consensus algorithm.
 
 ### Sawtooth PoET
@@ -127,33 +127,23 @@ enclave, called PoET-SGX.
   implementation of poet and its TEE enclave, which is anticipated for a point
   release in the near future.
 
-### Sawtooth Raft
-
-Hyperledger Sawtooth 1.1 supports a developer preview of [Sawtooth
-Raft](https://github.com/hyperledger/sawtooth-raft), a Rust implementation of
-Raft based on the [raft-rs](https://github.com/pingcap/raft-rs) library used by
-[TiKV](https://github.com/tikv/tikv). The Sawtooth Raft consensus engine uses
-the new consensus API.
-
-Sawtooth Raft is still in the prototype phase and is under active development.
-
 ### Sawtooth PBFT
 
-The Hyperledger Sawtooth 1.1 release includes the [Sawtooth PBFT consensus
-engine](https://github.com/hyperledger/sawtooth-pbft). Sawtooth PBFT is based
+The Sawtooth 1.1 release includes the [Sawtooth PBFT consensus
+engine](https://github.com/splintercommunity/sawtooth-pbft). Sawtooth PBFT is based
 on the [original PBFT paper](http://pmg.csail.mit.edu/papers/osdi99.pdf) with
 several extensions to make it compatible with Sawtooth and to resolve known
 issues with the original protocol. See the RFCs for more details:
 
-- [Initial RFC](https://github.com/hyperledger/sawtooth-rfcs/pull/19)
-- [Extension RFC to mitigate fair ordering and silent leader issues](https://github.com/hyperledger/sawtooth-rfcs/pull/29)
-- [Extension RFC to enable observer validation of consensus](https://github.com/hyperledger/sawtooth-rfcs/pull/30)
+- [Initial RFC](https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0019-pbft-consensus.md)
+- [Extension RFC to mitigate fair ordering and silent leader issues](https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0029-pbft-regular-view-change.md)
+- [Extension RFC to enable observer validation of consensus](https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0030-pbft-consensus-seal.md)
 
 Sawtooth PBFT is still in the prototype phase and is under active development.
 
 ## Documentation
 
-In addition to updates for Hyperledger Sawtooth 1.1 features, technical
+In addition to updates for Sawtooth 1.1 features, technical
 corrections, and bug fixes throughout, the Sawtooth documentation has the
 following changes and improvements.
 
@@ -161,30 +151,30 @@ following changes and improvements.
 
 - Improved procedures for running a single Sawtooth node with Docker, Ubuntu,
   or AWS, plus a new Kubernetes procedure. See [Setting Up a Sawtooth
-  Application Development Environment](https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/installing_sawtooth.html).
+  Application Development Environment](https://sawtooth.splinter.dev/docs/1.1/app_developers_guide/installing_sawtooth.html).
 - New procedures to add multiple nodes to a network for Docker, Ubuntu, and
-  Kubernetes. See [Creating a Sawtooth Network](https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/creating_sawtooth_network.html).
+  Kubernetes. See [Creating a Sawtooth Network](https://sawtooth.splinter.dev/docs/1.1/app_developers_guide/creating_sawtooth_network.html#about-the-sawtooth-network-environment).
 - Updated procedure for trying the example tic-tac-toe transaction processor in
-  Sawtooth. See [Playing with the XO Transaction Family](https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/intro_xo_transaction_family.html).
+  Sawtooth. See [Playing with the XO Transaction Family](https://sawtooth.splinter.dev/docs/1.1/app_developers_guide/intro_xo_transaction_family.html).
 - Improved and expanded tutorials for using the Sawtooth JavaScript, Go, and
-  Python SDKs, plus a new Rust version. See [Using the Sawtooth SDKs](https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/using_the_sdks.html).
+  Python SDKs, plus a new Rust version. See [Using the Sawtooth SDKs](https://sawtooth.splinter.dev/docs/core/nightly/master/app_developers_guide/using_the_sdks.html).
 
 ### API References
 
 - New Rust SDK documentation; see
-  [Rust SDK API Reference](https://sawtooth.hyperledger.org/docs/core/nightly/master/sdks.html#rust).
+  [Rust SDK API Reference](https://sawtooth.splinter.dev/docs/1.1/sdks.html#rust).
 
 ### System Administrator’s Guide
 
 - Improved procedure for setting up a Sawtooth network with PoET simulator
   consensus, including new steps to change off-chain settings and test the
-  system. See [Setting Up a Sawtooth Node](https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/setting_up_sawtooth_poet-sim.html).
+  system. See [Setting Up a Sawtooth Node](https://sawtooth.splinter.dev/docs/1.1/sysadmin_guide/setting_up_sawtooth_poet-sim.html).
 - Updated procedure to configure a proxy server. See [Using a Proxy Server to
-  Authorize the REST API](https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/rest_auth_proxy.html).
+  Authorize the REST API](https://sawtooth.splinter.dev/docs/docs/1.1/sysadmin_guide/rest_auth_proxy.html).
 - Updated permission information. See [Configuring Validator and Transactor
-  Permissions](https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/configuring_permissions.html).
+  Permissions](https://sawtooth.splinter.dev/docs/1.1/sysadmin_guide/configuring_permissions.html).
 - New procedure to configure Sawtooth to display Grafana metrics. See [Using
-  Grafana to Display Sawtooth Metrics](https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/grafana_configuration.html).
+  Grafana to Display Sawtooth Metrics](https://sawtooth.splinter.dev/docs/docs/1.1/sysadmin_guide/grafana_configuration.html).
 
 ### Architecture Guide
 
@@ -196,35 +186,10 @@ following changes and improvements.
 
 ## Smart Contract Engines
 
-### Sawtooth Seth
-
-Hyperledger Sawtooth 1.1 continues to support [Sawtooth
-Seth](https://github.com/hyperledger/sawtooth-seth), an Ethereum-compatible
-transaction family for the Hyperledger Sawtooth platform. Significant changes
-in this release:
-
-- A new `seth` CLI that is capable of communicating with the existing JSON-RPC
-  API. This CLI will let us test the JSON-RPC API, and will eventually allow us
-  to deprecate the existing REST-API-based CLI, which is now available in the
-  `seth-cli-go` container.
-- The existing JSON-RPC API has been updated to align more closely with
-  existing Ethereum JSON-RPC implementations, particularly in how it handles
-  account management. This change provides better inter-compatibility with
-  off-the-shelf Ethereum tooling.
-- The Burrow version was updated from 0.17 to 0.21 and vendor dependencies were
-  removed.
-- The build process and dependencies have been updated and aligned with current
-  best practices, such as formatting the Rust code and linting it with Clippy.
-- The documentation has been updated with minor corrections.
-- Several minor bugs have been fixed, such as a segfault occurring when
-  creating an account with a nonce, and invalid addresses being displayed in
-  contract listing.
-- This release includes Dockerfiles suitable for publishing to Docker Hub.
-
 ### Sawtooth Sabre
 
-Hyperledger Sawtooth 1.1 supports [Sawtooth
-Sabre](https://github.com/hyperledger/sawtooth-sabre), a transaction family
+Sawtooth 1.1 supports [Sawtooth
+Sabre](https://github.com/splintercommunity/sawtooth-sabre), a transaction family
 that implements on-chain smart contracts executed in a WebAssembly virtual
 machine. Sabre smart contracts are stored on chain and executed using the Sabre
 transaction processor.
@@ -249,7 +214,8 @@ already-written Rust transaction processors to a Sabre smart contract.
   its own Dockerfile for development.
 
 Check out the [build system
-RFC](https://github.com/hyperledger/sawtooth-rfcs/pull/25) for more details.
+RFC](https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0025-docker-compose-builds.md)
+for more details.
 
 **Note**: Requires Docker Engine 18.02.0 or later.
 
@@ -265,16 +231,16 @@ RFC](https://github.com/hyperledger/sawtooth-rfcs/pull/25) for more details.
 - This release includes example files for two Kubernetes deployments: A
   five-node network using PoET simulator and a single-node environment using
   dev mode consensus. The Application Developer’s Guide describes how to use
-  these example files; see the [Hyperledger Sawtooth
-  documentation](https://sawtooth.hyperledger.org/docs/core/releases/1.1/app_developers_guide.html).
+  these example files; see the [Sawtooth
+  documentation](https://sawtooth.splinter.dev/docs/1.1/app_developers_guide/).
 
 ## Website
 
 The Sawtooth website,
-[sawtooth.hyperledger.org](https://sawtooth.hyperledger.org), has been updated
+[sawtooth.splinter.dev/](https://sawtooth.splinter.dev/), has been updated
 with this release. This update includes:
 
-- A new home page for Hyperledger Sawtooth that provides links to examples,
+- A new home page for Sawtooth that provides links to examples,
   documentation, and timely blog posts.
 - The structure to easily update static content and blog posts.
 - The ability to conduct agile changes, reviews, and approvals through Github.
@@ -289,4 +255,4 @@ we plan to:
 
 ---
 
-[The Hyperledger Sawtooth Team](https://sawtooth.hyperledger.org/)
+[The Sawtooth Team](https://sawtooth.splinter.dev/)
