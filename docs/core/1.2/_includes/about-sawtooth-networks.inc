@@ -17,7 +17,7 @@ they join the network.
    The example environment includes the Sawtooth REST API on all validator
    nodes. However, an application could provide a custom REST API (or no REST
    API). See
-   `Sawtooth Supply Chain <https://github.com/hyperledger/sawtooth-supply-chain>`_
+   `Sawtooth Supply Chain <https://github.com/splintercommunity/sawtooth-supply-chain>`_
    for an example of a custom REST API.
 
    This environment also runs a consensus engine on each node. The consensus

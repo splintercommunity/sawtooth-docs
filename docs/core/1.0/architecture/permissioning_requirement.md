@@ -2,7 +2,7 @@
 
 The following is a detailed list of permissioning requirements,
 capabilities, and user stories that aid in the explanation and
-discussion of the permissioning design for Hyperledger Sawtooth.
+discussion of the permissioning design for Sawtooth.
 
 The following permission groups are presented in this document:
 

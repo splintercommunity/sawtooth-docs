@@ -1,6 +1,6 @@
 # Events and Transaction Receipts
 
-Hyperledger Sawtooth supports creating and broadcasting events. This
+Sawtooth supports creating and broadcasting events. This
 allows applications to do the following:
 
 -   Subscribe to events that occur related to the blockchain, such as a

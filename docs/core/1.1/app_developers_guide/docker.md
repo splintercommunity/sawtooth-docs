@@ -1,6 +1,6 @@
 # Using Docker for your Development Environment
 
-This procedure explains how to set up Hyperledger Sawtooth for
+This procedure explains how to set up Sawtooth for
 application development using a multi-container Docker environment. It
 shows you how to start Sawtooth and connect to the necessary Docker
 containers, then walks you through the following tasks:

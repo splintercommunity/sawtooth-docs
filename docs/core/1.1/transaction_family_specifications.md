@@ -26,7 +26,7 @@ developing your own transaction family.
     Java, and JavaScript (Node.js). The family name is `intkey`; the
     associated transaction processor executables are `intkey-tp-go`, and
     `intkey-tp-java`; the processor in its own repo is
-    [JavaScript](https://github.com/hyperledger/sawtooth-sdk-javascript/blob/master/examples/intkey/).
+    [JavaScript](https://github.com/splintercommunity/sawtooth-sdk-javascript/blob/master/examples/intkey/).
     The `intkey command </cli/intkey>`{.interpreted-text role="doc"}
     provides an example CLI client.
 
@@ -72,7 +72,7 @@ developing your own transaction family.
     The family name is `xo`; the associated transaction processor
     executables are `xo-tp-go`, and `xo-tp-python`; the processor in its
     own repo is
-    [JavaScript](https://github.com/hyperledger/sawtooth-sdk-javascript/blob/master/examples/xo/).
+    [JavaScript](https://github.com/splintercommunity/sawtooth-sdk-javascript/blob/master/examples/xo/).
     The `xo command </cli/xo>`{.interpreted-text role="doc"} provides an
     example CLI client.
 

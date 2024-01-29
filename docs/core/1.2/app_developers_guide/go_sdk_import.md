@@ -15,7 +15,7 @@ additional steps you\'ll need to take to get started developing for
 Sawtooth in Go.
 
 1.  Get Go SDK located at [Sawtooth Go SDK
-    repository](https://github.com/hyperledger/sawtooth-sdk-go).
+    repository](https://github.com/splintercommunity/sawtooth-sdk-go).
 
     Note that \$GOPATH is a list of directories, the Go SDK is
     downloaded to the first directory entry present in it. We will
@@ -23,7 +23,7 @@ Sawtooth in Go.
     of this document.
 
 ``` console
-$ go get github.com/hyperledger/sawtooth-sdk-go
+$ go get github.com/splintercommunity/sawtooth-sdk-go
 ```
 
 2.  Import the SDK into your Go files. You need to specify which
@@ -32,7 +32,7 @@ $ go get github.com/hyperledger/sawtooth-sdk-go
 ``` go
 import (
     // to use signing package from SDK
-    "github.com/hyperledger/sawtooth-sdk-go/signing"
+    "github.com/splintercommunity/sawtooth-sdk-go/signing"
 )
 
 // --snip--
@@ -41,12 +41,12 @@ import (
 3.  Generate the protobuf files.
 
 ``` console
-$ cd $GOPATH/src/github.com/hyperledger/sawtooth-sdk-go
+$ cd $GOPATH/src/github.com/splintercommunity/sawtooth-sdk-go
 $ go generate
 ```
 
 4.  The Root location of the generated protobuf is
-    `github.com/hyperledger/sawtooth-sdk-go/protobuf/`. Notice that you
+    `github.com/splintercommunity/sawtooth-sdk-go/protobuf/`. Notice that you
     may need `"github.com/golang/protobuf/proto"` for encoding /
     decoding. For example:
 
@@ -54,7 +54,7 @@ $ go generate
 import (
     "github.com/golang/protobuf/proto"
     // For transaction protobuf structs
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/transaction_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/transaction_pb2"
 )
 
 // --snip--

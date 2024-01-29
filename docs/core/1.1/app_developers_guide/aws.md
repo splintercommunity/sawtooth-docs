@@ -1,6 +1,6 @@
 # Using AWS with Sawtooth
 
-This tutorial explains how to set up Hyperledger Sawtooth for
+This tutorial explains how to set up Sawtooth for
 application development using the Amazon Elastic Compute Cloud (Amazon
 EC2) service. It shows you how to launch an instance of a Sawtooth
 validator node from the [Amazon Web Services (AWS)
@@ -72,7 +72,7 @@ genesis block. To learn how the typical startup process works, see
 
 # Step 1: Launch a Sawtooth Instance
 
-1.  Launch a Sawtooth instance from the [Hyperledger Sawtooth product
+1.  Launch a Sawtooth instance from the [Sawtooth product
     page on the AWS
     Marketplace](https://aws.amazon.com/marketplace/pp/B075TKQCC2). For
     more information, see the Amazon guide [Launching an AWS Marketplace

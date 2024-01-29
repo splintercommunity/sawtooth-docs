@@ -28,13 +28,13 @@ The Maturity column shows the general maturity level of each feature:
 The available SDKs are in the following repositories:
 
 -   Python:
-    <https://github.com/hyperledger/sawtooth-core/tree/master/sdk/python>
+    <https://github.com/splintercommunity/sawtooth-core/tree/master/sdk/python>
 -   Rust:
-    <https://github.com/hyperledger/sawtooth-core/tree/master/sdk/rust>
--   Go: <https://github.com/hyperledger/sawtooth-sdk-go>
--   JavaScript: <https://github.com/hyperledger/sawtooth-sdk-javascript>
--   Java: <https://github.com/hyperledger/sawtooth-sdk-java>
--   C++: <https://github.com/hyperledger/sawtooth-sdk-cxx>
+    <https://github.com/splintercommunity/sawtooth-core/tree/master/sdk/rust>
+-   Go: <https://github.com/splintercommunity/sawtooth-sdk-go>
+-   JavaScript: <https://github.com/splintercommunity/sawtooth-sdk-javascript>
+-   Java: <https://github.com/splintercommunity/sawtooth-sdk-java>
+-   C++: <https://github.com/splintercommunity/sawtooth-sdk-cxx>
 
 <!--
   Licensed under Creative Commons Attribution 4.0 International License

@@ -2,7 +2,7 @@
 
 The process of encoding information to be submitted to a distributed
 ledger is generally non-trivial. A series of cryptographic safeguards
-are used to confirm identity and data validity. Hyperledger Sawtooth is
+are used to confirm identity and data validity. Sawtooth is
 no different, but the {{ language }} SDK does provide client
 functionality that abstracts away most of these details, and greatly
 simplifies the process of making changes to the blockchain.
@@ -36,7 +36,7 @@ const signer = CryptoFactory(context).newSigner(privateKey)
 {% elif language == \'Go\' %}
 
 ``` go
-import "github.com/hyperledger/sawtooth-sdk-go/signing"
+import "github.com/splintercommunity/sawtooth-sdk-go/signing"
 
 context := signing.NewSecp256k1Context()
 privateKey := context.NewRandomPrivateKey()
@@ -138,7 +138,7 @@ import (
     "crypto/sha512"
     "encoding/hex"
     "github.com/golang/protobuf/proto"
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/transaction_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/transaction_pb2"
     "strings"
 )
 
@@ -318,7 +318,7 @@ const transaction = protobuf.Transaction.create({
 ``` go
 import (
     "encoding/hex"
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/transaction_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/transaction_pb2"
 )
 
 signature := hex.EncodeToString(signer.Sign(transactionHeaderBytes))
@@ -386,7 +386,7 @@ const txnBytes2 = transaction.finish()
 ``` go
 import (
     "github.com/golang/protobuf/proto"
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/transaction_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/transaction_pb2"
 )
 
 rawTransactionList := transaction_pb2.TransactionList{
@@ -461,7 +461,7 @@ const batchHeaderBytes = protobuf.BatchHeader.encode({
 ``` go
 import (
     "github.com/golang/protobuf/proto"
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/batch_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/batch_pb2"
 )
 
 transactionSignatures := []string{transaction.HeaderSignature}
@@ -540,7 +540,7 @@ const batch = protobuf.Batch.create({
 ``` go
 import (
     "encoding/hex"
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/batch_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/batch_pb2"
 )
 
 signature := hex.EncodeToString(signer.Sign(batchHeader))
@@ -605,7 +605,7 @@ const batchListBytes = protobuf.BatchList.encode({
 ``` go
 import (
     "github.com/golang/protobuf/proto"
-    "github.com/hyperledger/sawtooth-sdk-go/protobuf/batch_pb2"
+    "github.com/splintercommunity/sawtooth-sdk-go/protobuf/batch_pb2"
 )
 
 rawBatchList := batch_pb2.BatchList{

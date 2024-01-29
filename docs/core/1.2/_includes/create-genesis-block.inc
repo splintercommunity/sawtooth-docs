@@ -149,7 +149,7 @@ genesis block also includes the keys for the other nodes in the initial network.
 
      For the available settings and their default values, see
      "On-Chain Settings" in the `Sawtooth PBFT documentation
-     <https://sawtooth.hyperledger.org/docs/#sawtooth-pbft>`__.
+     <https://sawtooth.splinter.dev/docs/#sawtooth-pbft>`__.
 
    * For PoET:
 
@@ -164,8 +164,8 @@ genesis block also includes the keys for the other nodes in the initial network.
      .. note::
 
         This example shows the default PoET settings.
-        For more information, see the `Hyperledger Sawtooth Settings
-        FAQ <https://sawtooth.hyperledger.org/faq/settings/>`__.
+        For more information, see the `Sawtooth Settings
+        FAQ <https://sawtooth.splinter.dev/faq/settings/>`__.
 
 #. As the sawtooth user, combine the separate batches into a single genesis
    batch that will be committed in the genesis block.

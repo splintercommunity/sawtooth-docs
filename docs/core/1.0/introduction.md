@@ -1,6 +1,6 @@
 # Introduction
 
-Hyperledger Sawtooth is an enterprise blockchain platform for building
+Sawtooth is an enterprise blockchain platform for building
 distributed ledger applications and networks. The design philosophy
 targets keeping ledgers *distributed* and making smart contracts *safe*,
 particularly for enterprise use.
@@ -17,7 +17,7 @@ Sawtooth\'s core design allows applications to choose the transaction
 rules, permissioning, and consensus algorithms that support their unique
 business needs.
 
-Sawtooth is an open source project under the Hyperledger umbrella. For
+Sawtooth is an open source project. For
 information on how to contribute, see [Join the Sawtooth
 Community](#join-the-sawtooth-community).
 
@@ -102,7 +102,7 @@ performance over serial execution.
 
 ## Event System
 
-Hyperledger Sawtooth supports creating and broadcasting events. This
+Sawtooth supports creating and broadcasting events. This
 allows applications to:
 
 > -   Subscribe to events that occur related to the blockchain, such as
@@ -196,24 +196,24 @@ For more information, see
 >     illustrates how to synchronize the blockchain state to a local
 >     database for complex queries. For more information, see the
 >     [sawtooth-supply-chain repo on
->     GitHub](https://github.com/hyperledger/sawtooth-supply-chain).
+>     GitHub](https://github.com/splintercommunity/sawtooth-supply-chain).
 > -   Sawtooth Marketplace: Allows users to exchange specific quantities
 >     of customized assets with other users on the blockchain. This
 >     application contains a number of components that, together with a
 >     Sawtooth validator, will run a Sawtooth blockchain and provide a
 >     simple RESTful API to interact with it. For more information, see
 >     the [sawtooth-marketplace repo on
->     GitHub](https://github.com/hyperledger/sawtooth-marketplace).
+>     GitHub](https://github.com/splintercommunity/sawtooth-marketplace).
 > -   Sawtooth Private UTXO: Demonstrates how assets can be created and
 >     traded. It shows how to use SGX to allow for assets to be
 >     transferred off ledger and privately traded, where only the
 >     trading parties know the details of the transaction. For more
 >     information, see the [sawtooth-private-utxo repo on
->     GitHub](https://github.com/hyperledger/sawtooth-private-utxo).
+>     GitHub](https://github.com/splintercommunity/sawtooth-private-utxo).
 
 # Getting Started with Application Development
 
-## Try Hyperledger Sawtooth
+## Try Sawtooth
 
 The Sawtooth documentation explains how to set up a local validator for
 demonstrating Sawtooth functionality and testing an application. Once
@@ -265,7 +265,7 @@ The Sawtooth software is distributed as source code with an Apache
 license. You can get the code to start building your own distributed
 ledger.
 
-> -   [sawtooth-core](https://github.com/hyperledger/sawtooth-core):
+> -   [sawtooth-core](https://github.com/splintercommunity/sawtooth-core):
 >     Contains fundamental classes used throughout the Sawtooth project,
 >     as well as the following items:
 >     -   The implementation of the validator process which runs on each
@@ -275,22 +275,22 @@ ledger.
 >     -   Dockerfiles to support development or launching a network of
 >         validators
 >     -   Source files for this documentation
-> -   [Seth](https://github.com/hyperledger/sawtooth-seth): Deploy
+> -   [Seth](https://github.com/splintercommunity/sawtooth-seth): Deploy
 >     Ethereum Virtual Machine (EVM) smart contracts to Sawtooth
 > -   [Sawtooth
->     Marketplace](https://github.com/hyperledger/sawtooth-marketplace):
+>     Marketplace](https://github.com/splintercommunity/sawtooth-marketplace):
 >     Exchange customized \"Assets\" with other users on the blockchain
 > -   [Sawtooth Supply
->     Chain](https://github.com/hyperledger/sawtooth-supply-chain):
+>     Chain](https://github.com/splintercommunity/sawtooth-supply-chain):
 >     Trace the provenance and other contextual information of any asset
 > -   [Sawtooth Private
->     UTXO](https://github.com/hyperledger/sawtooth-private-utxo):
+>     UTXO](https://github.com/splintercommunity/sawtooth-private-utxo):
 >     Create and trade assets, using SGX to allow assets to be
 >     transferred off-ledger and traded privately
 
 ## Join the Sawtooth Community
 
-Sawtooth is an open source project under the Hyperledger umbrella. We
+Sawtooth is an open source project. We
 welcome working with individuals and companies interested in advancing
 distributed ledger technology. Please see `/community`{.interpreted-text
 role="doc"} for ways to become a part of the Sawtooth community.
@@ -302,4 +302,4 @@ the OpenSSL Toolkit (<http://www.openssl.org/>).
 
 This project relies on other third-party components. For details, see
 the LICENSE and NOTICES files in the [sawtooth-core
-repository](https://github.com/hyperledger/sawtooth-core).
+repository](https://github.com/splintercommunity/sawtooth-core).

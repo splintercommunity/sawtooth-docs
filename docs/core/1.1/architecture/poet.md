@@ -11,7 +11,7 @@ The Proof of Elapsed Time (PoET) Consensus method offers a solution to
 the Byzantine Generals Problem that utilizes a "trusted execution
 environment" to improve on the efficiency of present solutions such as
 Proof-of-Work. The initial reference implementation of PoET released to
-Hyperledger was written for an abstract TEE to keep it flexible to any
+was written for an abstract TEE to keep it flexible to any
 TEE implementation. This specification defines a concrete implementation
 for SGX. The following presentation assumes the use of Intel SGX as the
 trusted execution environment.

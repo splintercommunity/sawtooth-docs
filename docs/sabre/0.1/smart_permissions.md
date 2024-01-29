@@ -7,7 +7,7 @@ business logic; however, existing distributed ledger systems do not
 generally include a mechanism for representing organization-specific
 business logic. This paper describes a software architecture and design
 for implementing such a permissioning system for distributed ledger
-applications using Hyperledger Sawtooth and WebAssembly.
+applications using Sawtooth and WebAssembly.
 
 # Background
 

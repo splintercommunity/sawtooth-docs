@@ -7,7 +7,7 @@
   https://creativecommons.org/licenses/by/4.0/
 -->
 
-Hyperledger Sawtooth stores data within a Merkle Tree. Data is stored in
+Sawtooth stores data within a Merkle Tree. Data is stored in
 leaf nodes, and each node is accessed using an addressing scheme that is
 composed of 35 bytes, represented as 70 hex characters. The recommended
 way to construct an address is to use the hex-encoded hash values of the

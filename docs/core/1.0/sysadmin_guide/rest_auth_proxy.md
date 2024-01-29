@@ -1,7 +1,7 @@
 # Using a Proxy Server to Authorize the REST API
 
 As a lightweight shim on top of internal communications, requests sent
-to the *Hyperledger Sawtooth* REST API are simply passed on to the
+to the *Sawtooth* REST API are simply passed on to the
 validator, without any sort of authorization. While this is in keeping
 with the public nature of blockchains, that behavior may not be
 desirable in every use case. Rather than internally implementing one
@@ -27,7 +27,7 @@ proxying. In that case, a link that should look like this:
 
 ``` json
 {
-  "link": "https://hyperledger.org/sawtooth/blocks?head=..."
+  "link": "https://splinter.dev/sawtooth/blocks?head=..."
 }
 ```
 
@@ -53,7 +53,7 @@ when building links.
   -----------------------------------------------------------------------------------
   header                  description                             example
   ----------------------- --------------------------------------- -------------------
-  **X-Forwarded-Host**    The domain name of the proxy server.    *hyperledger.org*
+  **X-Forwarded-Host**    The domain name of the proxy server.    *splinter.dev*
 
   **X-Forwarded-Proto**   The protocol/scheme used to make        *https*
                           request.                                
@@ -64,7 +64,7 @@ when building links.
                           if the proxy endpoints do not map       
                           directly to the REST API endpoints      
                           (i.e.                                   
-                          *\"hyperledger.org/sawtooth/blocks\"*   
+                          *\"splinter.dev/sawtooth/blocks\"*
                           -\> *\"localhost:8008/blocks\"*).       
   -----------------------------------------------------------------------------------
 
@@ -86,7 +86,7 @@ building response links:
   -----------------------------------------------------------------------------------
   key         description                                    example
   ----------- ---------------------------------------------- ------------------------
-  **host**    The domain name of the proxy server.           *host=hyperledger.org*
+  **host**    The domain name of the proxy server.           *host=splinter.dev*
 
   **proto**   The protocol/scheme used to make request.      *proto=https*
 
@@ -94,7 +94,7 @@ building response links:
               extra path information. Only necessary if the  
               proxy endpoints do not map directly to the     
               REST API endpoints (i.e.                       
-              *\"hyperledger.org/sawtooth/blocks\"* -\>      
+              *\"splinter.dev/sawtooth/blocks\"* -\>
               *\"localhost:8008/blocks\"*).                  
   -----------------------------------------------------------------------------------
 
