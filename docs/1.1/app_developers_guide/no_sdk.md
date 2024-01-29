@@ -1,6 +1,6 @@
 # Development Without an SDK
 
-*Hyperledger Sawtooth* provides SDKs in a variety of languages to
+*Sawtooth* provides SDKs in a variety of languages to
 abstract away a great deal of complexity and simplify developing
 applications for the platform. The recommended way to work with Sawtooth
 is through one of these SDKs wherever possible. However, if there is no
