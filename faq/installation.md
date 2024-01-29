@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -21,13 +22,13 @@ $ apt search sawtooth
 ```
 
 For more, up-to-date installation information see
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/sysadmin_guide/installation.html>
+<https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/setting_up_sawtooth_network.html>
 
 ## How do I edit Sawtooth settings?
 
 With `.toml` configuration files in `/etc/sawtooth` . Examples are in
 the directory as `.toml.example` . For details, see
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/configuring_sawtooth.html>
+<https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_sawtooth.html>
 
 Configuration files include:
 
@@ -217,7 +218,7 @@ Another cause is the file doesn\'t exist. Create it with
 ## How do I install Sawtooth on Ubuntu?
 
 Follow the instructions at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/ubuntu.html>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/installing_sawtooth.html#using-ubuntu-for-a-single-sawtooth-node>
 
 These instructions are missing steps for installing and starting the
 DevMode consensus engine. If the consensus engine is not started, no new
@@ -241,55 +242,18 @@ $ sudo -u sawtooth devmode-engine-rust -vv --connect tcp://localhost:5050
     the consensus engine connected with validator TCP port 5050 (for
     consensus messages).
 
-## How do I install Sawtooth on AWS?
-
--   Sign up for a free AWS Free Tier account, if you don\'t have an
-    account. The AWS Free Tier is free for qualifying developers. This
-    gives you 1 Micro instance (or any combination of instances up to
-    750 hours/month) for 12 months. See <https://aws.amazon.com/free/>
--   Create your instance from the Hyperledger Sawtooth product page on
-    AWS Marketplace, at
-    <https://aws.amazon.com/marketplace/pp/B075TKQCC2>
--   Follow instructions to launch an AWS Marketplace instance at
-    <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launch-marketplace-console.html>
--   Then follow the instructions for using your Sawtooth AWS instance at
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/aws.html>
-
-## How do I use ssh with AWS?
-
-By default ssh access to AWS instances are disabled. To enable, first
-paste the contents of your public key, at `~/.ssh/id_rsa.pub` , to
-`Key Pairs` under your EC2 Dashboard. Use this key when creating your
-Sawtooth instance.
-
-After creating your AWS Sawtooth instance, go to your EC2 Dashboard and
-click on the security group for your instance (usually `default`).
-Select the `Inbound` tab and `Edit`. Add `SSH` (TCP port 22) and Source
-`Anywhere` (or `My IP` and your IP address) and save. I had to reboot
-the instance (Actions \--\> InstanceState \--\> Reboot) to get it to
-work.
-
 ## How to I build Sawtooth from source?
 
 Use `git` to download the source, then `build_all` to build. Type
 `./bin/build_all` for options. For example: .. code:: sh
 
 > \$ sawtooth \--version \$ git clone
-> <https://github.com/hyperledger/sawtooth-core> \$ cd sawtooth-core \$
+> <https://github.com/splintercommunity/sawtooth-core> \$ cd sawtooth-core \$
 > ./bin/build_all -l python
 
 For details, see
-<https://github.com/hyperledger/sawtooth-core/blob/master/BUILD.md>
+<https://github.com/splintercommunity/sawtooth-core/blob/main/BUILD.md>
 
-## How do I install Sawtooth on FreeBSD?
-
-Sawtooth is supported for Ubuntu Linux with binary packages. For other
-other \*IX-like systems, including FreeBSD, you can build from source.
-The following blog may help:
-<https://wiki.freebsd.org/HyperledgerSawtooth> This is based on FreeBSD
-11.1. Docker is not required to run Sawtooth. See also this bug for the
-status of the FreeBSD Sawtooth port:
-<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=228581>
 
 <h2 id="i-get-error-address-already"> I get this error while installing
 Sawtooth: `Error starting userland proxy: listen tcp 0.0.0.0:8080:
@@ -337,7 +301,7 @@ endpoints
 Ubuntu 18.04 LTS is supported only in the nightly development packages.
 Use Ubuntu 16.04 LTS for the stable release packages. You can also
 install Sawtooth with Docker. See:
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/docker.html>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html#using-docker-for-a-sawtooth-test-network>
 
 If you wish to install the nightly development packages on Ubuntu 18.04
 LTS (Bionic), then, for now, specify the individual packages you wish to
@@ -346,9 +310,6 @@ install instead of parent package `sawtooth`. For example,
 ```
 sudo apt-get install python3-sawtooth-cli python3-sawtooth-integration python3-sawtooth-rest-api python3-sawtooth-sdk python3-sawtooth-settings python3-sawtooth-signing python3-sawtooth-validator sawtooth-devmode-engine-rust
 ```
-
-For details, see
-<https://jira.hyperledger.org/projects/STL/issues/STL-1465>
 
 <h2 id="i-get-error-no-matching-dist"> I get this error installing Sawtooth:
 `No matching distribution found for sawtooth_rest_api`</h2>
@@ -417,18 +378,4 @@ $ sudo apt-get install python3-sawtooth-cli python3-sawtooth-integration \
 sawtooth.consensus.algorithm.name and sawtooth.consensus.algorithm.version must
 be set in the genesis block` when installing Sawtooth 1.2 nightly builds</h2>
 
-The installation instructions for \"Step 3\" at
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/ubuntu.html>
-are incomplete for Sawtooth nightly builds. They work for Sawtooth 1.1,
-but for nightly builds the consensus engine setting is now required. The
-correct instructions in Step 3 for nightly builds are:
-
-```sh
-$ cd /tmp
-$ sudo -u sawtooth sawset genesis -k /etc/sawtooth/keys/validator.priv
-$ sudo -u sawtooth sawset proposal create \
-     -k /etc/sawtooth/keys/validator.priv \
-     sawtooth.consensus.algorithm.name=Devmode \
-     sawtooth.consensus.algorithm.version=0.1 -o config.batch
-$ sudo -u sawtooth sawadm genesis config-genesis.batch config.batch
-```
+See setting up a Genesis Block for 1.2 here <https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/installing_sawtooth.html#create-genesis-block-ubuntu-label>

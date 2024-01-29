@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -214,8 +215,8 @@ containers with `sudo docker stop $(docker ps -q)`
 Kubernetes requires VirtualBox or some other virtual machine software.
 Documentation on using Kubernetes with Minikube for Sawtooth on Linux or
 Mac hosts is available here:
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/kubernetes.html>
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/creating_sawtooth_network.html#kubernetes-start-a-multiple-node-sawtooth-network>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/installing_sawtooth.html#using-kubernetes-for-a-single-sawtooth-node>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html#using-kubernetes-for-a-sawtooth-test-network>
 
 ## Can Docker run inside a virtual machine?
 
@@ -239,13 +240,6 @@ For a list of directories used by Sawtooth, see
 It is best to set the `SAWTOOTH_HOME` environment variable so all the
 configuration and data is under one root directory, see discussion of
 [default paths]({% link docs/1.2/sysadmin_guide/configuring_sawtooth.md %}#path-configuration-file).
-
-<h2 id="i-get-error-1-2-not-found">I get this error running Docker:
-`ERROR: manifest for hyperledger/sawtooth-validator:1.2 not found`</h2>
-
-You are following instructions for the unreleased Sawtooth `nightly`
-build. There are no Docker images for the nightly build. Instead use the
-[versioned build documentation]({% link docs/1.2/app_developers_guide/index.md %}).
 
 <h2 id="why-does-network-not-start-subsequent-runs"> Why doesn't
 sawtooth-default-poet.yaml start the network successfully on subsequent

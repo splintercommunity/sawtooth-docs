@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -99,7 +100,7 @@ GET /peers
 :   Fetch a list of current peered validators
 
 For more information, see the Sawtooth REST API Reference at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/rest_api.html>
+<https://sawtooth.splinter.dev/docs/1.2/rest_api/>
 
 ## What is a transaction receipt?
 
@@ -109,7 +110,7 @@ family-specific data, transaction-related events, and if the transaction
 was valid. The transaction family-specific receipt data is usually
 empty, but can be added by the TP with `context.add_receipt_data()` To
 access transaction receipts, use the REST API. For more information, see
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/events_and_transactions_receipts.html#transaction-receipts>
+<https://sawtooth.splinter.dev/docs/1.2/architecture/events_and_transactions_receipts.html#transaction-receipts>
 
 ## How do I retrieve a transaction receipt?
 
@@ -119,11 +120,11 @@ listed with
 `wget http://localhost:8008/receipts?id=YourTransactionIDsHere` Replace
 `YourTransactionIDsHere` with 1 or more comma-separated 128 hex
 character transaction IDs. Change `localhost` to `rest-api` for Docker.
-The response is several lines of JSON format output. For example,
-<https://gist.github.com/danintel/0f878141c60bb566237e8db11226aa4e> .
+The response is several lines of JSON format output.
+
 For more than 15 IDs, use `POST /receipts` . For Receipts REST API
 details, see `receipts` at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/rest_api/endpoint_specs.html>
+<https://sawtooth.splinter.dev/docs/1.2/rest_api/>
 
 <h2 id="what-does-no-resource"> What does this error mean:
 `[... DEBUG route_handlers] Received CLIENT_STATE_GET_RESPONSE response from

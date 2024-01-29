@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -39,7 +40,7 @@ enforces different rules on how they are updated.
 ## Is there an example where the Settings TP is used in another TP?
 
 Yes. check out `sawtooth.identity.allowed_keys` in the Identity TP:
-<https://github.com/hyperledger/sawtooth-core/blob/master/families/identity/sawtooth_identity/processor/handler.py>
+<https://github.com/splintercommunity/sawtooth-core/blob/main/families/identity/sawtooth_identity/src/handler.rs>
 
 ## Can different Validator Nodes have different Transaction Processors running?
 
@@ -88,7 +89,7 @@ In a Sawtooth transaction, inputs list what are the inputs for the
 transaction (what addresses the TP can read). Outputs list what are the
 outputs for the transaction (what addresses the TP can modify). The
 inputs and outputs lists are specific to a transaction. See
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/transactions_and_batches.html>
+<https://sawtooth.splinter.dev/docs/1.2/architecture/transactions_and_batches.html>
 
 ## Why use round-robin if the transaction processors are identical?
 
@@ -203,14 +204,14 @@ By default, any TP can be added to a node without special permission
 validator, use `sawset proposal create` to set
 `sawtooth.validator.transaction_families`. For details, see
 `Configuring the List of Transaction Families` at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/docker.html>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html#configure-txn-procs-docker-label>
 
 ## How do I add events to the transaction processor?
 
 In the TP code, call `context.add_event()`. This adds a an
 application-specific event. In the client code (or other app for
 listening), subscribe to the event. For details, see
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/events_and_transactions_receipts.html#events>
+<https://sawtooth.splinter.dev/docs/1.2/architecture/events_and_transactions_receipts.html#events-reference-label>
 
 ## What initial Sawtooth events are available?
 
@@ -228,11 +229,7 @@ Besides application-specific events, the Sawtooth default events are:
 ## How do I subscribe to Sawtooth events?
 
 See the documentation at
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/event_subscriptions.html>
-Here are examples in Python and Javascript:
-
--   <https://github.com/danintel/sawtooth-cookiejar/blob/master/events/events_client.py>
--   <https://github.com/hyperledger/sawtooth-supply-chain/blob/master/ledger_sync/subscriber/index.js>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/event_subscriptions.html>
 
 ## How do I handle forks while subscribing to Sawtooth events?
 
@@ -313,7 +310,7 @@ timestamp in your transaction family\'s transaction payload.
 Sawtooth stores a timestamp in the block if the network is setup to
 inject BlockInfo transactions using the BlockInfo Transaction Family
 (which is used for EVM compatibility). See:
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/transaction_family_specifications/blockinfo_transaction_family.html>
+<https://sawtooth.splinter.dev/docs/1.2/transaction_family_specifications/blockinfo_transaction_family.html>
 
 ## Does Sawtooth allow multiple digital signatures on a single transaction?
 
@@ -337,7 +334,7 @@ data externally is it\'s not replicated across nodes and may be lost.
 <h2 id="what-does-respong-ping"> What does this message mean:
 `Did not respond to the ping, removing transaction processor` ?</h2>
 
-This is a message from the Hyperledger Sawtooth blockchain\'s Validator.
+This is a message from the Sawtooth blockchain\'s Validator.
 A timeout occurred when the Validator was checking connections with all
 the registered transaction processors. If a transaction processor does
 not respond, it is removed from the list.
