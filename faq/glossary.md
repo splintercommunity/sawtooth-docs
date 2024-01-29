@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -10,15 +11,15 @@
 
 Sawtooth Glossary
 
-:   <https://sawtooth.hyperledger.org/docs/core/nightly/master/glossary.html>
+:   <https://sawtooth.splinter.dev/docs/1.2/glossary.html>
 
 Sawtooth Architecture Definitions
 
-:   <https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/permissioning_requirement.html#definitions>
+:   <https://sawtooth.splinter.dev/docs/1.2/architecture/permissioning_requirement.html#definitions>
 
 PoET Definitions
 
-:   <https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/poet.html#definitions>
+:   <https://github.com/splintercommunity/sawtooth-docs/blob/main/docs/poet/1.1/architecture/poet.rst#definitions>
 
 ## Glossary
 
@@ -111,17 +112,12 @@ Context
 Classical Consensus
 
 :   Uses an agreement or voting mechanism to select a leader (vs.
-    Nakamoto-style consensus) E.g., PBFT and Raft
+    Nakamoto-style consensus) E.g., PBFT
 
 Crypto
 
 :   Cryptography\--encryption, authentication, and hashing. It does not
     mean blockchain or digital currency
-
-Dapps
-
-:   Ethereum Decentralized Applications. These are written in Solidity
-    and are supported by Sawtooth Seth
 
 DAML
 
@@ -181,12 +177,7 @@ Endpoint
     `http://localhost:8008/state` . Also refers to the validator
     connection URI. For example, `tcp://localhost:4004` . For more
     information, see
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/rest_api/endpoint_specs.html>
-
-EVM
-
-:   Ethereum Virtual Machine. Executes machine-independent code for
-    Ethereum. Supported by Seth on Sawtooth
+    <https://sawtooth.splinter.dev/docs/1.2/rest_api/>
 
 Fork
 
@@ -214,13 +205,6 @@ GS
 :   Global State or Ledger. For Sawtooth this is stored internally as a
     Merkle Tree
 
-Hyperledger
-
-:   \"Hyperledger is an open source collaborative effort created to
-    advance cross-industry blockchain technologies. It is a global
-    collaboration, hosted by The Linux Foundation.\" See:
-    <https://www.hyperledger.org/>
-
 IAS
 
 :   Intel Attestation Server. Used to authenticate PoET SGX keys; runs
@@ -240,7 +224,7 @@ Journal
 :   A group of Sawtooth Validator components that work together to
     handle batches and proposed blocks. This includes validating
     proposed blocks and publishing batches into blocks. See
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/architecture/journal.html>
+    <https://sawtooth.splinter.dev/docs/1.2/architecture/journal.html>
 
 k
 
@@ -342,15 +326,14 @@ PDO
 
 Permissioned Blockchain (aka Private Blockchain)
 
-:   participants must ID themselves to a network (e.g., Hyperledger
-    Sawtooth or Hyperledger Fabric)
+:   participants must ID themselves to a network (e.g., Sawtooth)
 
 Permissioning
 
 :   For the validator, controls what nodes are allowed to connect. For
     the transaction processor, controls what transactions and batches
     are accepted, based on signing keys. See
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/architecture/permissioning_requirement.html>
+    <https://sawtooth.splinter.dev/docs/1.2/architecture/permissioning_requirement.html>
 
 Permissionless Blockchain (aka Public Blockchain)
 
@@ -362,7 +345,7 @@ PoET
     used for Sawtooth). PoET with SGX has BFT. PoET CFT has CFT. Not
     CPU-intensive as with PoW-style algorithms, although it still can
     fork and have stale blocks. See PoET specification at
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/poet.html>
+    <https://github.com/splintercommunity/sawtooth-docs/blob/main/docs/poet/1.1/architecture/poet.rst>
 
 PoET CFT
 
@@ -407,12 +390,6 @@ r
 
 :   Rate, measurement of performance in transactions per second
 
-Raft
-
-:   Consensus algorithm that elects a leader for a term of arbitrary
-    time. Leader replaced if it times-out. Raft is faster than PoET, but
-    is not BFT (Raft is CFT). Also Raft does not fork.
-
 Remix
 
 :   A popular web-based IDE for Solidity
@@ -427,7 +404,7 @@ REST
     REST is available on a Sawtooth validator node through TCP
     port 8008. For more information, see the Sawtooth REST API Reference
     at
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/rest_api.html>
+    <https://sawtooth.splinter.dev/docs/1.2/rest_api/>
 
 ST
 
@@ -437,27 +414,21 @@ Sabre
 
 :   TF that implements on-chain smart contracts with the WebAssembly VM.
     For more information, see Sabre RFC at
-    <https://github.com/hyperledger/sawtooth-rfcs/blob/master/text/0007-wasm-smart-contracts.md>
+    <https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0007-wasm-smart-contracts.md>
 
 Sawtooth
 
-:   Hyperledger Sawtooth is a modular enterprise blockchain platform for
+:   Sawtooth is a modular enterprise blockchain platform for
     building, deploying, and running distributed ledgers
 
 Sawtooth Lake
 
-:   Sawtooth\'s original code name before Intel contributed Sawtooth to
-    the Linux Foundation\'s Hyperledger consortium
+:   Sawtooth\'s original code name
 
 Seed Nodes or Seed Peers
 
 :   Initial hard-coded set of peers a node knows about. The list expands
     with the Gossip algorithm
-
-Solidity
-
-:   A contract-oriented programming language used to implement smart
-    contracts. Compiles into Ethereum VM code and is supported by Seth
 
 Stale block
 
@@ -468,7 +439,7 @@ Stale block
 State Pruning
 
 :   Removing unneeded older state roots from Merkle-Radix global state
-    database. See <https://github.com/hyperledger/sawtooth-rfcs/pull/8>
+    database.
 
 Static Nodes or Static Peers
 
@@ -482,8 +453,7 @@ TEE
 
 TF
 
-:   Transaction Family. Consists of the Client, State, and TP. See
-    <https://www.hyperledger.org/blog/2017/06/22/whats-a-transaction-family>
+:   Transaction Family. Consists of the Client, State, and TP.
 
 TP
 
@@ -512,11 +482,6 @@ Safety
 Sawtooth
 
 :   Permissioned blockchain platform for running distributed ledgers
-
-Seth
-
-:   Ethereum-compatible Sawtooth Transaction Processor. Supports running
-    Ethereum Virtual Machine
 
 secp256k1
 

@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -24,17 +25,15 @@ is incomplete.
     --key /etc/sawtooth/keys/validator.priv \
     sawtooth.publisher.max_batches_per_block=200`
 -   Some baseline settings are documented at
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/transaction_family_specifications/settings_transaction_family.html>
+    <https://sawtooth.splinter.dev/docs/1.2/transaction_family_specifications/settings_transaction_family.html>
 -   Transactor settings are documented at
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/configuring_permissions.html>
+    <https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_permissions.html>
     and at
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/transaction_family_specifications/settings_transaction_family.html>
+    <https://sawtooth.splinter.dev/docs/1.2/transaction_family_specifications/settings_transaction_family.html>
 -   PoET settings are documented at
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/configure_sgx.html>
+    <https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configure_sgx.html>
 -   Validator settings are documented at
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/architecture/injecting_batches_block_validation_rules.html#on-chain-validation-rules>
-    and
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/architecture/injecting_batches_block_validation_rules.html#on-chain-configuration>
+    <https://sawtooth.splinter.dev/docs/1.2/architecture/injecting_batches_block_validation_rules.html>
 
 sawtooth.config.authorization_type
 
@@ -44,19 +43,18 @@ sawtooth.config.authorization_type
 sawtooth.consensus.algorithm.name
 
 :   Pluggable consensus algorithm name. These include `PoET`, `Devmode`,
-    `raft`, and `pbft`. The default is `devmode` for Sawtooth 1.1 or
+    and `pbft`. The default is `devmode` for Sawtooth 1.1 or
     earlier, with no default for the (unreleased) nightly build.
 
 sawtooth.consensus.algorithm.version
 
-:   Consensus algorithm version. Currently 0.1 for PoET, Devmode, PBFT,
-    and Raft.
+:   Consensus algorithm version. Currently 0.1 for PoET, Devmode, and PBFT
 
 sawtooth.consensus.block_validation_rules
 
 :   Lists validation rules to use in deciding what blocks to add to the
     blockchain. See
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/architecture/injecting_batches_block_validation_rules.html>
+    <https://sawtooth.splinter.dev/docs/1.2/architecture/injecting_batches_block_validation_rules.html>
 
 sawtooth.consensus.max_wait_time
 
@@ -77,7 +75,7 @@ sawtooth.consensus.pbft.members
     ```
 
     For details on this and other PBFT settings, see
-    <https://github.com/hyperledger/sawtooth-pbft/blob/master/src/config.rs>
+    <https://sawtooth.splinter.dev/docs/1.2/pbft/configuring-pbft.html>
 
 sawtooth.consensus.pbft.block_publishing_delay
 
@@ -105,29 +103,6 @@ sawtooth.consensus.pbft.forced_view_change_interval
 
 :   How many blocks to commit before forcing a view change for fairness
     Optional, default 100 blocks
-
-sawtooth.consensus.raft.election_tick
-
-:   RAFT consensus election tick, in seconds. E.g., 1500
-
-sawtooth.consensus.raft.heartbeat_tick
-
-:   RAFT consensus heartbeat tick, in seconds. E.g., 150
-
-sawtooth.consensus.raft.peers
-
-:   JSON list of each peer node\'s public key. Only required RAFT
-    setting. Key is from `/etc/sawtooth/keys/validator.pub` . Example:
-    ```json
-    ["0276f8fed116837eb7646f800e2dad6d13ad707055923e49df08f47a963547b631",\
-     "035d8d519a200cdb8085c62d6fb9f2678cf71cbde738101d61c4c8c2e9f2919aa3"]
-    ```
-
-sawtooth.consensus.raft.period
-
-:   RAFT consensus period, in seconds. E.g., 3. Higher settings cause
-    larger blocks, small settings have faster performance with smaller,
-    quicker block publication, but causes more network traffic.
 
 sawtooth.consensus.valid_block_publishers
 

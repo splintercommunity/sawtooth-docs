@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -36,29 +37,14 @@ PoET SGX (name \"PoET\", version 0.1)
     (a processor supporting Intel SGX). Currently supported in Sawtooth 1.0
     only.
 
-Raft (name \"raft\", version 0.1)
-
-:   Consensus algorithm that elects a leader for a term of arbitrary
-    time. Leader replaced if it times-out. Raft is faster than PoET, but
-    is CFT, not BFT. Also Raft does not fork. For Sawtooth Raft is new
-    and still being stabilized.
-
 ## Will Sawtooth support more consensus algorithms in the future?
 
 Yes. With pluggable consensus, the idea is to have a meaningful set of
 consensus algorithms so the \"best fit\" can be applied to an
-application\'s use case. Raft is a recent addition\--still being
-stabilized. Others are being planned.
+application\'s use case. Others are being planned.
 
 REMME.io has independently implemented Algorand Byzantine Agreement on
 Sawtooth.
-
-## Where is Raft documented?
-
-<https://sawtooth.hyperledger.org/docs/raft/nightly/master/> To use,
-basically set `sawtooth.consensus.algorithm` to `raft` and
-`sawtooth.consensus.raft.peers` to a list of peer nodes (network public
-keys).
 
 ## Does the PBFT implementation follow the original paper?
 
@@ -158,7 +144,7 @@ the desired inter block duration, and then there is a decent sized gap.
 
 ## Where is PoET 1.0 Specification?
 
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture/poet.html>
+<https://github.com/splintercommunity/sawtooth-docs/blob/main/docs/poet/1.1/architecture/poet.rst>
 
 ## Why is PoET SGX Byzantine Fault Tolerant?
 
@@ -175,9 +161,9 @@ link above.
 It is at `/etc/sawtooth/poet_enclave_sgx.toml` . It is only for
 configuring PoET SGX Enclave, not the PoET CFT (PoET without Intel SGX). A
 sample file is at
-<https://github.com/hyperledger/sawtooth-poet/blob/master/sgx/packaging/poet_enclave_sgx.toml.example>
+<https://github.com/splintercommunity/sawtooth-poet/blob/main/sgx/packaging/poet_enclave_sgx.toml.example>
 The configuration is documented at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/sysadmin_guide/configuring_sawtooth/poet_sgx_enclave_configuration_file.html>
+<https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_sawtooth.html#poet-sgx-enclave-configuration-file>
 
 <h2 id ="i-get-permission-denied-poet"> I run
 `sudo -u sawtooth poet registration create . . .` and get `Permission denied:
@@ -233,20 +219,10 @@ running, and this message was quite common.
 -   Use the `sawset proposal create` subcommand to modify
     `sawtooth.consensus.algorithm` (along with any consensus-required
     settings). For an example, see
-    <https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/creating_sawtooth_network.html>
+    <https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html>
 
 The initial default consensus algorithm is `devmode`, which is not for
 production use.
-
-Here is an example that changes the consensus to Raft:
-
-```
-sawset proposal create \
---url http://localhost:8008 --key /etc/sawtooth/keys/validator.priv  \
- sawtooth.consensus.algorithm=raft sawtooth.consensus.raft.peers=\
-  '["0276f8fed116837eb7646f800e2dad6d13ad707055923e49df08f47a963547b631", \
- "035d8d519a200cdb8085c62d6fb9f2678cf71cbde738101d61c4c8c2e9f2919aa"]'`
-```
 
 ## How do I change the consensus algorithm for a network that has forked?
 
@@ -255,32 +231,16 @@ your consensus change proposal. Bring in the other nodes, with any
 consensus-required TPs running (for example, PoET requires the Validator
 Registry TP).
 
-## Where can I find information on the proposed PoET2 algorithm?
-
-PoET2 is different from PoET in that it supports SGX without relying on
-Intel Platform Services Enclave (PSE), making it suitable in cloud
-environments. PoET2 no longer saves anything across reboots (such as the
-clock, monotonic counters, or a saved ECDSA keypair). The PoET2 SGX
-enclave still generates a signed, random duration value. More details
-and changes are documented in the PoET2 RFC at
-<https://github.com/hyperledger/sawtooth-rfcs/pull/20/files> A video
-presentation (2018-08-23) is at
-<https://drive.google.com/drive/folders/0B_NJV6eJXAA1VnFUakRzaG1raXc>
-(starting at 7:45)
-
 ## What is the Intel Platform Developers Kit for Blockchain - Ubuntu?
 
 The PDK is a small form factor computer with SGX with Ubuntu,
-Hyperledger Sawtooth, and development software pre-installed. For
+Sawtooth, and development software pre-installed. For
 information, see
 <https://designintools.intel.com/Intel_Platform_Developers_Kit_for_Blockchain_p/q6uidcbkcpdk.htm>
 
 ## Where is the Consensus Engine API documented?
 
-At <https://github.com/hyperledger/sawtooth-rfcs/pull/4> See also the
-\"Sawtooth Consensus Engines\" video at
-20180426-sawtooth-tech-forum.mp4, starting at 10:00, in directory
-<https://drive.google.com/drive/folders/0B_NJV6eJXAA1VnFUakRzaG1raXc>
+At <https://github.com/splintercommunity/sawtooth-rfcs/blob/main/text/0004-consensus-api.md>
 
 ## What are the minimum number of nodes needed for PoET?
 
@@ -293,9 +253,8 @@ production, have 2 nodes per identity.
 ## Can PoET be configured for small networks?
 
 Yes, for development purposes. For production purposes, consider using
-another consensus algorithm. For example, Raft or PBFT handles a small
-number of nodes nicely. We recommend PBFT for small networks. Raft is
-less interesting being CFT and not BFT, and having overall less testing.
+another consensus algorithm. For example,  PBFT handles a small
+number of nodes nicely. We recommend PBFT for small networks.
 
 For PoET in a small blockchain network, disable defense-in-depth tests
 for small test networks (say, \< \~12 nodes) with:
@@ -323,8 +282,7 @@ peer nodes win. Or modify an existing consensus module to experiment.
 
 First stop the validator, then restart the consensus engine. If you
 leave the validator engine running, it will not connect to the restarted
-consensus engine. See
-<https://jira.hyperledger.org/projects/STL/issues/STL-1465>
+consensus engine.
 
 ## Do I start the consensus engine before or after the validator?
 

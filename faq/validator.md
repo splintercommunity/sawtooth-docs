@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -19,17 +20,14 @@ At a high-level, the Validator verifies the following:
 ## Is there a simple example to show how to run Sawtooth
 
 See these instructions to install and use Sawtooth with Docker, Ubuntu
-Linux, or AWS:
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/installing_sawtooth.html>
+or Kubernetes:
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/installing_sawtooth.html>
 
 ## Is there an example for a multiple node Sawtooth Network?
 
 See these instructions for setting up a 5-node Sawtooth Network with
 PoET CFT Consensus using Docker:
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/creating_sawtooth_network.html>
-
-Here is a gist with brief instructions for a 2-node network:
-<https://gist.github.com/askmish/a23bde6f2e59e4256be8afe965a9166b>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html>
 
 The important part about configuring a multi-node network is to create a
 genesis block only with the first validator. Do not create multiple
@@ -39,7 +37,7 @@ genesis blocks with subsequent validators (that is do not re-run
 ## How do I add a node to a Sawtooth Network?
 
 See
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/creating_sawtooth_network.html#ubuntu-add-a-node-to-the-single-node-environment>
+<https://sawtooth.splinter.dev/docs/1.1/app_developers_guide/creating_sawtooth_network.html#step-6-stop-the-sawtooth-network-optional>
 
 ## How do I verify the Validator is running and reachable?
 
@@ -135,11 +133,6 @@ specified by at least one other node (and preferably multiple nodes).
 
 :   contains policy settings, if any
 
-`/var/lib/sawtooth-raft/`
-
-:   Optional Raft consensus-specific files. Present only if you use
-    Raft. Directory can be changed with `$SAWTOOTH_RAFT_HOME`
-
 If set these files are placed under directory `$SAWTOOTH_HOME` (except
 files under your home directory, `~` ). Detailed configuration
 information and examples for Sawtooth directories is at
@@ -198,21 +191,16 @@ peers.
     firewall configuration to communicate with peer validators. Uses
     ZMQ.
 
--   5050 is used by the consensus engine (such as PoET or Raft). This
+-   5050 is used by the consensus engine (such as PoET or PBFT). This
     port should be closed to external hosts in a firewall configuration.
     Uses ZMQ.
-
--   3030 is used by the Seth TP (if you have Seth running). It is used
-    to send JSON-RPC EVM requests and is not encrypted. This port should
-    be blocked from external access because one can do admin operations
-    from it.
 
 Sawtooth does not use UDP ports (only TCP).
 
 ## How do I create a Sawtooth Network?
 
 See *Creating a Sawtooth Network* at
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide/creating_sawtooth_network.html>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html>
 
 Create the genesis block only one time, on the first node, and configure
 one or more peer Validator nodes for each node.
@@ -233,17 +221,16 @@ instances with different:
     above). If `$SAWTOOTH_HOME` is set, all these directories are under
     `$SAWTOOTH_HOME`. It\'s not recommended, but you can also can also
     change the directories in `path.toml`. For more information, see
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/sysadmin_guide/configuring_sawtooth/path_configuration_file.html>
+    <https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_sawtooth.html#path-configuration-file>
 
 -   REST API TCP port (default 8008). Change in `rest-api.toml`. For
     details, see
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/sysadmin_guide/configuring_sawtooth/rest_api_configuration_file.html>
+    <https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_sawtooth.html#rest-api-configuration-file>
 
 -   Validator TCP ports (default of 8800 for the peer network and 4004
     for the validator components). Change with the `bind` setting in
     `validator.toml`. For details, see
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/sysadmin_guide/configuring_sawtooth/>
-    validator_configuration_file.html
+    <https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_sawtooth.html#validator-configuration-file>
 
 -   Genesis block. This is important. As with validators on multiple
     machines (the usual case), it\'s important to create a genesis block
@@ -311,20 +298,12 @@ to be scheduled irrespective of the failed transaction.
     language and therefore slower. It also suffers from the Global
     Interpreter Lock (GIL), which locks executing multiple threads to
     one thread at-a-time
--   When fully stabilized, substitute PoET consensus with Raft
-    consensus. Raft is CFT instead of BFT, but it should perform better
-    in exchange for lower fault tolerance
--   As you make changes, measure the impact with a performance tool such
-    as Hyperledger Caliper
 
 ## Is there any way to get real-time Sawtooth statistics?
 
 Yes. Sawtooth has Telegraf/InfluxDB/Grafana to gather and display
 metrics. Install the packages and follow these instructions:
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/grafana_configuration.html>
-
-Here is a Sawtooth Grafana screenshot:
-<https://twitter.com/liedenavilla/status/1042792583221653504>
+<https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/grafana_configuration.html>
 
 <h2 id="what-does-this-error-entry-address"> What does this error mean:
 `[... DEBUG client_handlers] Unable to find entry at address ...`? </h2>
@@ -361,7 +340,7 @@ prevents the validator being overwhelmed with the requests.
 You need to set the number of validators if it\'s over 10. For example,
 in `/etc/sawtooth/validator.toml` set `maximum_peer_connectivity = 50`
 See
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/sysadmin_guide/configuring_sawtooth/validator_configuration_file.html>
+<https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_sawtooth.html#validator-configuration-file>
 You can also use the `sawtooth-validator --maximum-peer-connectivity` command
 line option.
 

@@ -1,12 +1,13 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2019, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License 
 # <https://creativecommons.org/licenses/by/4.0/>
 ---
 
-# Sawtooth FAQ: Upgrading Hyperledger Sawtooth
+# Sawtooth FAQ: Upgrading Sawtooth
 
-## Points to consider while upgrading Hyperledger Sawtooth
+## Points to consider while upgrading Sawtooth
 
 This is applicable to upgrade from version 1.0.X to 1.1.X
 
@@ -14,7 +15,7 @@ This is applicable to upgrade from version 1.0.X to 1.1.X
     files default stored in /var/lib/sawtooth directory).
 2.  Persist the keys generated for the validator (default stored in
     /etc/sawtooth directory).
-3.  Hyperledger Sawtooth 1.1.X versions have a major feature introduced
+3.  Sawtooth 1.1.X versions have a major feature introduced
     where different consensus engine can be plugged into the validator.
     -   Validator shall open the listener port so that the consensus
         engine can be registered to it. This in addition to other ports
@@ -53,7 +54,7 @@ again.
 -   Maintain older version of consensus engines for a newly added node
     in the network, to catch up with the earlier blocks.
 
-## General practice for deploying a Hyperledger Sawtooth application
+## General practice for deploying a Sawtooth application
 
 -   Transactions may be rejected by a validator if the input rate is
     higher than what a validator can handle in its queue. The queue

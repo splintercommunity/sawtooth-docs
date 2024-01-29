@@ -1,4 +1,5 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
@@ -17,21 +18,13 @@ in any language supported by the Sawtooth SDK.
 ## What languages does the Sawtooth Client SDK support?
 
 JavaScript, Python 3, and Rust. Others are in the process of being
-added: Java and C++. A SDK for Microsoft .NET is also available from
-<https://github.com/hyperledger/sawtooth-sdk-dotnet> One can also
-interface directly to Sawtooth without a SDK. Multiple languages are
-supported as different languages are more suited for different problem
-spaces and developers tend to be more comfortable with some languages
-more than others. See this chart of Sawtooth SDK support:
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/sdk_table.html>
-For more information, see the Sawtooth SDK Reference at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/sdks.html>
+added: Java and C++. One can also interface directly to Sawtooth without a SDK.
+Multiple languages are supported as different languages are more suited for
+different problem spaces and developers tend to be more comfortable with some
+languages more than others.
 
-## Does Sawtooth have a .NET SDK?
-
-Yes, there is a Sawtooth SDK for .NET Core described here:
-<https://tomislav.tech/2018-03-02-sawtooth-sdk-net-core/> The source is
-here: <https://github.com/hyperledger/sawtooth-sdk-dotnet>
+See this chart of Sawtooth SDK support:
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/using_the_sdks.html>
 
 ## When would you want to develop without the Sawtooth SDK?
 
@@ -39,7 +32,7 @@ You should use the SDK whenever possible for your language. If your
 preferred development language does not have a SDK, or if the SDK is
 incomplete for something you need, then develop without a SDK. For
 details, see
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/no_sdk.html>
+<https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/no_sdk.html>
 
 ## What does the client do to send a transaction?
 
@@ -156,7 +149,3 @@ McCullough](https://github.com/colincmcc) gives these steps:
     of those set variable locations. I put the file in the system32
     folder, which fixed the issue. Any input on what environment
     variable needs to be set would be helpful.
-
-Until Rust and the RustSDK are a bit more mature, I still recommend
-using a Docker container for development to avoid any MS Windows
-troubles. You can reach me at <hello@colinmac.me> with any questions.

@@ -1,17 +1,18 @@
 ---
+# Copyright (c) 2024 Bitwise IO, Inc.
 # Copyright (c) 2018, Intel Corporation.
 # Licensed under Creative Commons Attribution 4.0 International License
 # <https://creativecommons.org/licenses/by/4.0/>
 ---
 
-# Sawtooth FAQ: Hyperledger Sawtooth in General
+# Sawtooth FAQ: Sawtooth in General
 
 ## What is Sawtooth?
 
-Hyperledger Sawtooth is a modular enterprise blockchain platform for
+Sawtooth is a modular enterprise blockchain platform for
 building, deploying, and running distributed ledgers. The design
 philosophy targets keeping ledgers distributed and making smart
-contracts safe, particularly for enterprise use. Hyperledger Sawtooth
+contracts safe, particularly for enterprise use. Sawtooth
 includes a novel consensus algorithm, Proof of Elapsed Time (PoET),
 which targets large distributed validator populations with minimal
 resource consumption. No special hardware is required to run Sawtooth or
@@ -21,187 +22,35 @@ PoET.
 
 Sawtooth introduction
 
-:   <https://sawtooth.hyperledger.org/docs/core/nightly/master/introduction.html>
+:   <https://sawtooth.splinter.dev/docs/1.2/>
 
-Sawtooth introduction and download
-
-:   <https://www.hyperledger.org/projects/sawtooth>
 
 GitHub repository for Sawtooth Core
 
-:   <https://github.com/hyperledger/sawtooth-core>
+:   <https://github.com/splintercommunity/sawtooth-core>
 
 Sawtooth documentation, with several guides and references, including:
 
-:   <https://sawtooth.hyperledger.org/docs/core/nightly/master/>
+:   <https://sawtooth.splinter.dev/>
 
 Sawtooth Application Developer\'s Guide
 
-:   <https://sawtooth.hyperledger.org/docs/core/nightly/master/app_developers_guide.html>
+:   <https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/>
 
 Sawtooth Architecture
 
-:   <https://sawtooth.hyperledger.org/docs/core/releases/latest/architecture.html>
+:   <https://sawtooth.splinter.dev/docs/1.2/architecture/>
 
-Sawtooth White Paper
 
-:   <https://www.hyperledger.org/wp-content/uploads/2018/01/Hyperledger_Sawtooth_WhitePaper.pdf>
+Sawtooth Discord Channel
 
-Sawtooth chat main channel (several others Sawtooth channels exist here)
+:   <https://discord.com/invite/fnUmDv7tSH>
 
-:   <https://chat.hyperledger.org/channel/sawtooth>
-
-Sawtooth mailing list (not as popular as the chat channel above)
-
-:   <https://lists.hyperledger.org/g/sawtooth>
-
-Official Sawtooth FAQ
-
-:   <https://www.hyperledger.org/wp-content/uploads/2018/01/Hyperledger_Sawtooth_FAQ.pdf>
 
 Sawtooth FAQ
 
-:   <https://github.com/danintel/sawtooth-faq>
+:   <https://sawtooth.splinter.dev/faq/>
 
-## Where are some good introductory videos?
-
-Hyperledger Sawtooth 1.0: Market Significance & Technical Overview
-(Hyperledger, 2018, 61:27) (free registration required):
-
-:   <https://gateway.on24.com/wcc/gateway/linux/1101876/1585244/hyperledger-sawtooth-v10-market-significance-and-technical-overview>
-    <https://www.hyperledger.org/resources/webinars>
-
-Hyperledger Sawtooth 1.0 Architecture and App Development
-(Bitwise IO, 2018, 31:26):
-
-:   <https://youtu.be/uBebFQM49Xk>
-
-You can find several more here:
-
-:   <https://www.youtube.com/results?search_query=Hyperledger+Sawtooth>
-
-## Where are some good advanced videos?
-
-A list of Hyperledger Sawtooth [videos](/faq/videos/) (mostly Sawtooth
-Technical Forum recordings) are at
-<https://github.com/danintel/sawtooth-faq/blob/master/settings.rst>
-
-## What courses are available on Hyperledger Sawtooth?
-
--   B9Lab has a five-week Sawtooth Developer training course. See
-    <https://academy.b9lab.com/courses/B9lab/current-sawtooth-course>
--   EdX has a \"Blockchain for Business\" course that reviews Blockchain
-    technology and includes an introduction to Sawtooth and other
-    Hyperledger blockchain software. See
-    <https://www.edx.org/course/blockchain-business-introduction-linuxfoundationx-lfs171x-0>
--   A self-study set of PDF slides, with a simple supply chain
-    application as an example, is at
-    <https://github.com/hyperledger/education-sawtooth-simple-supply>
--   A self-paced course is Cryptomoji, which where students extend a
-    Cryptokitties clone,
-    <https://github.com/hyperledger/education-cryptomoji>
--   The Kerala Blockchain Academy offers a Certified Hyperledger
-    Sawtooth Developer (CHD) program at IITM-K, India. See
-    <http://www.iiitmk.ac.in/kba/>
--   Blockchain Educators offers a Certified Hyperledger Sawtooth
-    Administrator (CHSA) course. See
-    <https://www.blockchaineducators.org/hyperledger/>
-
-## What Sawtooth exams are available?
-
-A Certified Hyperledger Sawtooth Administrator (CHSA) exam is available
-at
-<https://www.hyperledger.org/resources/training/hyperledger-sawtooth-certification>
-
-## Are there any example applications based on Sawtooth?
-
-A simple application that implements a cookie jar showing just the Sawtooth API:
-
-:   <https://github.com/danintel/sawtooth-cookiejar>
-
-A example application that implements a simple wallet application:
-
-:   <https://github.com/askmish/sawtooth-simplewallet>
-
-A more complex example that implements a supply chain example and demonstrates
-many of the key concepts behind the implementation of a complete Sawtooth
-application:
-
-:   <https://github.com/hyperledger/sawtooth-supply-chain>
-
-An example application that shows how to exchange quantities of customized
-\"Assets\" with other users on the blockchain:
-
-:   <https://github.com/hyperledger/sawtooth-marketplace>
-
-## Are there any live demos of a Sawtooth Application?
-
-Yes. A Sawtooth Supply Chain demo, AssetTrack is at
-<https://demo.bitwise.io/> . Another demo, for tracking fish, is at
-<https://demo.bitwise.io/fish/> . A Sawbucks demo is at
-<https://demo.bitwise.io/sawbucks/> . A Supply Chain Traceability demo
-is at <https://provenance.sawtooth.me/> . The source and docs are at
-<https://github.com/hyperledger/sawtooth-marketplace/>
-
-## What is the Hyperledger Sawtooth Application Developers Forum?
-
-It is to provide opportunities to discuss technical application
-development questions with developers experienced with Hyperledger
-Sawtooth. The forum is held on Wednesdays 9-10am Central Time using Zoom
-video conferencing. An Asia-time friendly Developers Forum is held
-Thursday at 2pm India Time. For details and current contact information
-for both forums, see <https://chat.hyperledger.org/channel/sawtooth> for
-details.
-
-## What is the difference between Hyperledger and Sawtooth?
-
--   Sawtooth (or Hyperledger Sawtooth) is a blockchain implementation
-    initially contributed by Intel Corporation and now maintained by the
-    Sawtooth community. Sawtooth does not have to be deployed on Intel
-    hardware; however, Sawtooth does include the optional PoET consensus
-    module, which uses Intel SGX to provide an efficient, Byzantine
-    Fault Tolerant consensus mechanism that does not rely on expensive
-    and inefficient mining algorithms. See
-    <https://www.hyperledger.org/projects/sawtooth>
--   Hyperledger is a consortium that includes Sawtooth as well as other
-    blockchain implementations. \"Hyperledger is an open source
-    collaborative effort created to advance cross-industry blockchain
-    technologies. It is a global collaboration, hosted by The Linux
-    Foundation\" See <https://www.hyperledger.org/>.
-
-<h2 id="diff-between-sawtooths"> What is the difference between Sawtooth,
-Sawtooth Lake, and Hyperledger Sawtooth?</h2>
-
-Sawtooth Lake was Intel\'s original code name for its blockchain
-research project, named after a lake in the Sawtooth Mountains of
-central Idaho. After it was contributed to the Linux Foundation\'s
-Hyperledger consortium, the name was changed to Hyperledger Sawtooth.
-Sawtooth is just shorthand for Hyperledger Sawtooth and are the same
-thing.
-
-## What is the difference between Hyperledger Sawtooth and Hyperledger Fabric?
-
-Hyperledger Sawtooth and Fabric are two independent implementations of a
-blockchain under the Linux Foundation\'s Hyperledger Blockchain project.
-Here are some differences:
-
--   Fabric\'s Smart Contract must be written in GoLang or Javascript.
-    Sawtooth transaction processors can be written in multiple
-    languages, such as Rust, Python, Go, or JavaScript. SDKs for other
-    languages are being added
--   Fabric has \"endorsing peers\" and ordering services to pre-process
-    transactions. Sawtooth has a validator that handles everything from
-    validating the transactions and distributing the transaction to peer
-    nodes
--   Fabric stores data in a leveldb or couchdb, with a separate ledger
-    per channel. Sawtooth stores all data in a central lmdb database
-    with each transaction family using a separate address prefix.
--   Fabric has multiple components, including Orderers, Peers, CAs,
-    CouchDB, and Tools. Sawtooth has the Sawtooth Validator and a
-    Transaction Processor for each Transaction Family. The Validator\'s
-    REST API communicates with a client
-
-Based on <https://www.skcript.com/svr/hyperledger-fabric-to-sawtooth>
 
 ## What differentiates Sawtooth from other blockchains?
 
@@ -214,9 +63,6 @@ This includes:
 -   Multi-language SDK support (Python, Go, Javascript, Rust, with more
     being added)
 -   Parallel transaction processing
-
-For more on Sawtooth differentiation and philosophy, see
-<https://www.hyperledger.org/blog/2016/11/02/meet-sawtooth-lake>
 
 ## Should I use Sawtooth or other blockchain software for my application?
 
@@ -231,12 +77,6 @@ and community support. We hope Sawtooth fits your needs.
 -   A database can be changed after a commit. A blockchain\'s records
     are immutable and cannot be undone after a commit
 -   A database must have a trusted central authority
-
-<h2 id="does-sawtooth-fish"> Does Sawtooth focus on developing blockchain
-solutions for sustainable fishing?</h2>
-
-No. The Seafood Supply Chain application is a proof-of-concept. Sawtooth
-is a general-purpose enterprise blockchain platform.
 
 ## What does an immutable blockchain mean?
 
@@ -258,7 +98,7 @@ blockchain *transactions* are immutable. With some programming languages
 
 ```sh
 $ sawtooth --version
-sawtooth-cli (Hyperledger Sawtooth) version 1.1.2
+sawtooth-cli (Sawtooth) version 1.1.2
 ```
 
 <h2 id="diff-between-saw-cli"> What's the difference between the
@@ -286,7 +126,7 @@ sawtooth-cli (Hyperledger Sawtooth) version 1.1.2
     information
 
 For more information, see the Sawtooth CLI Command Reference at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/cli.html>
+<https://sawtooth.splinter.dev/docs/1.2/cli/sawtooth.html>
 
 ## Must software developed with Sawtooth be open source?
 
@@ -324,47 +164,9 @@ block. This usually happens when a second node is added with its own
 genesis node. Only the first node in a Sawtooth network should be
 created with a genesis block.
 
-## Does Hyperledger Composer support Sawtooth?
-
-No. IBM has also reduced Composer development to maintenance mode. See:
-<https://lists.hyperledger.org/g/composer/message/125>
-
-## Does Hyperledger Explorer support Sawtooth?
-
-No, not now. There is a Sawtooth Explorer at
-<https://github.com/hyperledger/sawtooth-explorer> It may or may not be
-merged with Hyperledger Explorer in the future. Sawtooth Explorer
-provides visibility into the Sawtooth blockchain for node operators.
-
-## How do I setup and use Sawtooth Explorer?
-
--   Install, configure, and run Hyperledger Sawtooth
--   Clone Sawtooth Explorer with
-    `git clone https://github.com/hyperledger/sawtooth-explorer`
--   `cd sawtooth-explorer`
--   In file `docker/nginx.conf`, change `proxy_pass` to
-    `http://localhost:8008`
--   In file `src/environments/environment.ts`, change `apiURL` to
-    `http://<host-ip-address>:8090` (change to your hostname or IP
-    address)
--   Start Sawtooth Explorer with `docker-compose up`
--   In a web browser, navigate to <http://>\<host-ip-address>:8090
-    (change to your hostname or IP address)
--   You can now see the transactions/batches that you submit from the
-    client to Sawtooth in the Explorer user interface
--   More details are at
-    <https://github.com/hyperledger/sawtooth-explorer>
-
 ## How do I report a bug?
 
-Use the JIRA bug tracking system at
-<https://jira.hyperledger.org/projects/STL/issues/STL-51?filter=allopenissues>
-You need an account, which you create with the Linux foundation at
-<https://identity.linuxfoundation.org/>, then login with that account.
-
-## How do I report a security bug?
-
-For security bugs only, send an email to <security@hyperledger.org>
+Please submit a GitHub issue at <https://github.com/splintercommunity/sawtooth-core/issues>
 
 ## What encryption algorithms are used by Sawtooth?
 
@@ -425,12 +227,6 @@ efficient in small networks and you\'ll likely get much better
 performance with other mechanisms in a small network, but PoET handles
 large populations easily.
 
-## Is there a Sawtooth security evaluation?
-
-Yes. This is a pre-1.0 release audit, that was required to be a part of
-the Linux Foundation\'s Hyperledger project. See
-<https://www.hyperledger.org/blog/2018/05/22/hyperledger-sawtooth-security-audit>
-
 ## Are there any examples of Sawtooth permissions?
 
 -   off-chain permissioning is in `/etc/sawtooth/validator.toml` (see
@@ -448,7 +244,7 @@ the Linux Foundation\'s Hyperledger project. See
     this Sawtooth network, `sawtooth.validator.transaction_families`
 -   then there are policies and roles from the optional Sawtooth
     Identity Transaction Processor, documented at
-    <https://sawtooth.hyperledger.org/docs/core/releases/latest/transaction_family_specifications/identity_transaction_family.html>
+    <https://sawtooth.splinter.dev/docs/1.2/transaction_family_specifications/identity_transaction_family.html>
 
 <h2 id="does-restore-state-peer">Does Sawtooth restore state when a peer
 restarts or when a peer is åout-of-sync with the network?</h2>
@@ -471,17 +267,7 @@ need to clone and modify  the entire `sawtooth-core` repository?</h2>
 No. It can be done that way, but it\'s not recommended. All you need to
 write is the client application and the Transaction Processor. The core
 Sawtooth functionality should be installed as packages instead of being
-built from source and integrated with your application. Here\'s some
-simple sample applications that are in standalone source repositories:
-
--   Simple Wallet, <https://github.com/askmish/sawtooth-simplewallet>
--   Cookie Jar, <https://github.com/danintel/sawtooth-cookiejar>
--   Cryptomoji, <https://github.com/hyperledger/education-cryptomoji> A
-    self-paced course using a Cryptokitties clone written in Sawtooth
--   Simple Supply Chain,
-    <https://github.com/hyperledger/education-sawtooth-simple-supply>
-    This will be the example in a future edX.org course on Sawtooth app
-    development
+built from source and integrated with your application.
 
 ## What is Sawtooth *global state agreement*?
 
@@ -526,10 +312,11 @@ network-wide.
 
 ## Are Docker containers required to run Sawtooth?
 
-Docker is a quick and easy way to get Sawtooth up and running. However,
-unlike other Hyperledger ledgers, Sawtooth does not require Docker.
+Docker is a quick and easy way to get Sawtooth up and running. However, Sawtooth
+does not require Docker.
+
 Follow the instructions to run on Ubuntu at
-<https://sawtooth.hyperledger.org/docs/core/releases/latest/app_developers_guide/ubuntu.html>
+https://sawtooth.splinter.dev/docs/1.2/app_developers_guide/creating_sawtooth_network.html#using-ubuntu-for-a-sawtooth-test-network>
 For specific apps, you can run without docker by manually running
 commands in a `Dockerfile` as follows:
 
@@ -557,13 +344,6 @@ commands in a `Dockerfile` as follows:
 AWS offers Sawtooth, and other cloud providers plan to offer Sawtooth on
 their cloud service.
 
-## Does Sawtooth support Ethereum?
-
-Yes, through Seth, Sawtooth\'s Ethereum-compatible Transaction
-Processor. It implements a Ethereum Virtual Machine (EVM) so Seth can
-run Ethereum Dapps written in Solidity. Seth uses Hyperledger Burrow as
-the code base.
-
 ## Does Sawtooth use blockchain mining?
 
 No. There is no inherent need to incentivize miners in a
@@ -588,7 +368,7 @@ A Role is a set if permissions. Identities could be assigned one or more
 roles. A role is a convenient shorthand because role(s) can be assigned
 to several identities rather than tediously assigning individual
 permissions to each identity. See
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/sysadmin_guide/configuring_permissions.html>
+<https://sawtooth.splinter.dev/docs/1.2/sysadmin_guide/configuring_permissions.html>
 
 ## What Sawtooth Roles are defined?
 
