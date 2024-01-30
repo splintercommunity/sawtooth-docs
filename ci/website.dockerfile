@@ -31,7 +31,7 @@ RUN apt-get update \
 
 WORKDIR /project
 
-RUN git clone https://github.com/hyperledger/sawtooth-sdk-python.git
+RUN git clone https://github.com/splintercommunity/sawtooth-sdk-python.git
 
 ENV PATH=$PATH:/project/sawtooth-sdk-python/bin
 
@@ -112,7 +112,7 @@ COPY apache/rewrite.conf /usr/local/apache2/conf/rewrite.conf
 
 RUN echo "\
 \n\
-ServerName sawtooth.hyperledger.org\n\
+ServerName sawtooth.splinter.dev\n\
 ErrorDocument 404 /404.html\
 \n\
 Include /usr/local/apache2/conf/rewrite.conf\n\

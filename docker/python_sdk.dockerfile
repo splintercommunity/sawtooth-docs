@@ -37,7 +37,7 @@ RUN apt-get update \
 
 WORKDIR /project
 
-RUN git clone https://github.com/hyperledger/sawtooth-sdk-python.git
+RUN git clone https://github.com/splintercommunity/sawtooth-sdk-python.git
 
 ENV PATH=$PATH:/project/sawtooth-sdk-python/bin
 
