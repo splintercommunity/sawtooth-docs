@@ -3,5 +3,7 @@ _site
 _userconfig.yml
 .idea
 .jekyll-cache/
+.jekyll-metadata
 
 docs/1.2/sdks/python_sdk
+docs/1.2/rest_api/api/

@@ -5,7 +5,7 @@
 
 # REST API Reference
 
-- [Endpoint Specifications](./openapi/)
+- [Endpoint Specifications]({%link docs/1.2/rest_api/api/index.html%})
 - [Error Responses]({%link docs/1.2/rest_api/error_codes.md%})
     - [HTTP Status Codes]({%link docs/1.2/rest_api/error_codes.md%}#http-status-codes)
     - [JSON Response]({%link docs/1.2/rest_api/error_codes.md%}#json-response)
