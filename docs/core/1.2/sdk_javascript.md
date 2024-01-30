@@ -1,8 +1,8 @@
 # JavaScript SDK API Reference
 
 -   [Transaction
-    Processor](https://sawtooth.hyperledger.org/docs/sdk-javascript/nightly/master/module-processor.html)
--   [Signing](https://sawtooth.hyperledger.org/docs/sdk-javascript/nightly/master/module-signing.html)
+    Processor](https://sawtooth.splinter.dev/docs/sdk-javascript/nightly/master/module-processor.html)
+-   [Signing](https://sawtooth.splinter.dev/docs/sdk-javascript/nightly/master/module-signing.html)
 
 <!--
   Licensed under Creative Commons Attribution 4.0 International License

@@ -33,13 +33,13 @@ that cargo/rust is already installed.
 
 The Sabre Smart Contracts use a similar API to the Sawtooth transaction
 processor API. If you are unfamiliar, please take a look at
-<https://sawtooth.hyperledger.org/docs/core/nightly/master/sdks.html>.
+<https://sawtooth.splinter.dev/docs/core/nightly/master/sdks.html>.
 
 Include the Sabre SDK in the dependencies list of the Cargo.toml file.
 
 ``` none
 [dependencies]
-sabre-sdk = {git = "https://github.com/hyperledger/sawtooth-sabre"}
+sabre-sdk = {git = "https://github.com/splintercommunity/sawtooth-sabre"}
 ```
 
 The Sabre SDK provides the following required structs needed to write a
@@ -142,7 +142,7 @@ sabre-sdk = {path = "../../../sdks/rust"}
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 rust-crypto = "0.2.36"
-sawtooth-sdk = {git = "https://github.com/hyperledger/sawtooth-sdk-rust"}
+sawtooth-sdk = {git = "https://github.com/splintercommunity/sawtooth-sdk-rust"}
 rustc-serialize = "0.3.22"
 log = "0.3.0"
 log4rs = "0.7.0"

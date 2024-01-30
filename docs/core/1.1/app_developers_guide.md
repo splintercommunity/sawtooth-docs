@@ -1,7 +1,7 @@
 # Application Developer\'s Guide
 
 This guide describes how to develop applications which run on top of the
-Hyperledger Sawtooth `core platform<Sawtooth core>`{.interpreted-text
+Sawtooth `core platform<Sawtooth core>`{.interpreted-text
 role="term"}, primarily through the use of Sawtooth\'s provided SDKs and
 `REST API`{.interpreted-text role="term"}.
 

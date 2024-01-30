@@ -1,6 +1,6 @@
 # Using Ubuntu for Your Development Environment
 
-This procedure explains how to set up Hyperledger Sawtooth for
+This procedure explains how to set up Sawtooth for
 application development on Ubuntu 16.04. It shows you how to install
 Sawtooth on Ubuntu, then walks you through the following tasks:
 
@@ -221,7 +221,7 @@ Use the same terminal window as the previous step.
     output will be similar to this truncated example:
 
     ``` console
-    [2018-03-14 15:53:34.909 INFO     cli] sawtooth-validator (Hyperledger Sawtooth) version 1.0.1
+    [2018-03-14 15:53:34.909 INFO     cli] sawtooth-validator (Sawtooth) version 1.0.1
     [2018-03-14 15:53:34.909 INFO     path] Skipping path loading from non-existent config file: /etc/sawtooth/path.toml
     [2018-03-14 15:53:34.910 INFO     validator] Skipping validator config loading from non-existent config file: /etc/sawtooth/validator.toml
     [2018-03-14 15:53:34.911 INFO     keys] Loading signing key: /etc/sawtooth/keys/validator.priv

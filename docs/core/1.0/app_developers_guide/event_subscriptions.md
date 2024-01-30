@@ -5,7 +5,7 @@ want to receive information on events such as the creation of a new
 block, switching to a new fork, or application-specific events defined
 by a transaction family.
 
-Client applications can subscribe to Hyperledger Sawtooth events using
+Client applications can subscribe to Sawtooth events using
 ZMQ and Protobuf messages. The general process is:
 
 1.  Construct a subscription that includes the event type and any

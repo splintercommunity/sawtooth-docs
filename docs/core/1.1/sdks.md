@@ -21,8 +21,8 @@ Signing \<sdks/python_sdk/sawtooth_signing.rst>
 # Javascript
 
 -   [Transaction
-    Processor](https://sawtooth.hyperledger.org/docs/js-sdk/releases/latest/module-processor.html)
--   [Signing](https://sawtooth.hyperledger.org/docs/js-sdk/releases/latest/module-signing.html)
+    Processor](https://sawtooth.splinter.dev/docs/js-sdk/releases/latest/module-processor.html)
+-   [Signing](https://sawtooth.splinter.dev/docs/js-sdk/releases/latest/module-signing.html)
 
 # Rust
 

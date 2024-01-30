@@ -3,7 +3,7 @@
 The following diagram shows a high-level view of the Sawtooth
 architecture.
 
-This guide describes the design and architecture of Hyperledger
+This guide describes the design and architecture of
 Sawtooth, an enterprise blockchain platform for building distributed
 ledger applications and networks.
 
@@ -22,7 +22,7 @@ architecture/journal architecture/scheduling architecture/rest_api
 architecture/validator_network architecture/permissioning_requirement
 architecture/injecting_batches_block_validation_rules
 architecture/events_and_transactions_receipts PBFT Consensus
-\<<https://sawtooth.hyperledger.org/docs/pbft/releases/latest/architecture.html>\>
+\<<https://sawtooth.splinter.dev/docs/pbft/releases/latest/architecture.html>\>
 PoET 1.0 Consensus \<architecture/poet>
 :::
 

@@ -5,7 +5,7 @@ want to receive information on events such as the creation of a new
 block or switching to a new fork. This includes application-specific
 events that are defined by a custom transaction family.
 
-Hyperledger Sawtooth supports creating and broadcasting events. Event
+Sawtooth supports creating and broadcasting events. Event
 subscription allows an application to perform the following functions:
 
 -   Subscribe to events that occur related to the blockchain
@@ -20,9 +20,9 @@ processor]{.title-ref} could store state data in a reporting database
 for analysis and processing, which provides access to state information
 without the delay of requesting state data from the validator. For
 examples, see the [Sawtooth Supply
-Chain](https://github.com/hyperledger/sawtooth-supply-chain) or
+Chain](https://github.com/splintercommunity/sawtooth-supply-chain) or
 [Sawtooth
-Marketplace](https://github.com/hyperledger/sawtooth-marketplace)
+Marketplace](https://github.com/splintercommunity/sawtooth-marketplace)
 repository.
 
 This section describes the structure of events and event subscriptions,

@@ -96,7 +96,7 @@ Note
 
 If you\'re looking for a working implementation of an XO transaction
 processor in Rust, check out the [xo_rust
-example](https://github.com/hyperledger/sawtooth-sdk-rust/tree/master/examples/xo_rust)
+example](https://github.com/splintercommunity/sawtooth-sdk-rust/tree/master/examples/xo_rust)
 in the Rust SDK repository.
 :::
 

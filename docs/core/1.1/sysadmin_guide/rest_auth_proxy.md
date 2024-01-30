@@ -30,7 +30,7 @@ this:
 
 ``` json
 {
-  "link": "https://hyperledger.org/sawtooth/blocks?head=..."
+  "link": "https://splinter.dev/sawtooth/blocks?head=..."
 }
 ```
 
@@ -54,14 +54,14 @@ builds a link, it looks for the following types of \"X-Forwarded\"
 headers:
 
 -   `X-Forwarded-Host`: Domain name of the proxy server (for example,
-    `hyperledger.org`)
+    `splinter.dev`)
 -   `X-Forwarded-Proto`: Protocol/scheme used to make requests (for
     example, `https`)
 -   `X-Forwarded-Path`: Extra path information (for example,
     `/sawtooth`). This uncommon header is implemented by the REST API.
     It is necessary only if the proxy endpoints do not map directly to
     the REST API endpoints, that is, when
-    `hyperledger.org/sawtooth/blocks` does not map to
+    `splinter.dev/sawtooth/blocks` does not map to
     `localhost:8008/blocks`.
 
 ## \"Forwarded\" Headers
@@ -80,13 +80,13 @@ When the REST API builds a response link, it looks for the following
 keys:
 
 -   `host`: Domain name of the proxy server (for example,
-    `host=hyperledger.org`)
+    `host=splinter.dev`)
 -   `proto`: Protocol/scheme used to make requests (for example,
     `proto=https`)
 -   `path`: Extra path information (for example, `path="/sawtooth"`).
     This non-standard key header is necessary only if the proxy
     endpoints do not map directly to the REST API endpoints, that is,
-    when `hyperledger.org/sawtooth/blocks` does not map to
+    when `splinter.dev/sawtooth/blocks` does not map to
     `localhost:8008/blocks`.
 
 ::: note

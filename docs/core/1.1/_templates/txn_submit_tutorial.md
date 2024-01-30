@@ -2,8 +2,8 @@
 
 The process of encoding information to be submitted to a distributed
 ledger is generally non-trivial. A series of cryptographic safeguards
-are used to confirm identity and data validity, and *Hyperledger
-Sawtooth* is no different. SHA-512 hashes and secp256k1 signatures must
+are used to confirm identity and data validity, and *Sawtooth* is no different.
+SHA-512 hashes and secp256k1 signatures must
 be generated. Transaction and Batch Protobufs must be created and
 serialized. The process can be somewhat daunting, but this document will
 take Sawtooth client developers step by step through the process using
@@ -89,7 +89,7 @@ Buffer](https://developers.google.com/protocol-buffers/) (or Protobuf)
 format. This allows data to be serialized and deserialized consistently
 and efficiently across multiple platforms and multiple languages. The
 Protobuf definition files are located in the
-[/protos](https://github.com/hyperledger/sawtooth-core/tree/master/protos)
+[/protos](https://github.com/splintercommunity/sawtooth-core/tree/master/protos)
 directory at the root level of the sawtooth-core repo. These files must
 first be compiled into usable classes for your language (typically with
 the [protoc]{.title-ref} command). Then, serializing a

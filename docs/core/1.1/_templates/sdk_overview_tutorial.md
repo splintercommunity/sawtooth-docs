@@ -69,17 +69,17 @@ implementation.
 {% elif language == \'Go\' %}
 
 > For a full Go implementation of the XO transaction family, see
-> <https://github.com/hyperledger/sawtooth-sdk-go/tree/master/examples/xo_go>.
+> <https://github.com/splintercommunity/sawtooth-sdk-go/tree/master/examples/xo_go>.
 
 {% elif language == \'Java\' %}
 
 > For a full Java implementation of the XO transaction family, see
-> <https://github.com/hyperledger/sawtooth-sdk-java/tree/master/examples/xo_java>.
+> <https://github.com/splintercommunity/sawtooth-sdk-java/tree/master/examples/xo_java>.
 
 {% elif language == \'JavaScript\' %}
 
 > For a full JavaScript implementation of the XO transaction family, see
-> <https://github.com/hyperledger/sawtooth-sdk-javascript/tree/master/examples/xo>.
+> <https://github.com/splintercommunity/sawtooth-sdk-javascript/tree/master/examples/xo>.
 
 {% else %}
 

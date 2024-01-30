@@ -23,7 +23,7 @@ Important
 :::
 
 You may need to update your BIOS with a security fix before running
-Hyperledger Sawtooth with PoET. Affected versions and instructions for
+Sawtooth with PoET. Affected versions and instructions for
 updating can be found on [Intel\'s
 website](https://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-00076&languageid=en-fr).
 If you\'re running an affected version, you must update the BIOS to
@@ -333,7 +333,7 @@ Add the following content to the file:
 
 ``` console
 #
-# Hyperledger Sawtooth -- Validator Configuration
+# Sawtooth -- Validator Configuration
 #
 
 # This file should exist in the defined config directory and allows

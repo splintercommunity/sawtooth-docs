@@ -1,6 +1,6 @@
 # REST API
 
-*Hyperledger Sawtooth* provides a pragmatic RESTish API for clients to
+*Sawtooth* provides a pragmatic RESTish API for clients to
 interact with a validator using common HTTP/JSON standards. It is an
 entirely separate process, which once running, allows transactions to be
 submitted and blocks to be read with a common language-neutral
@@ -30,7 +30,7 @@ truth that completely documents every implemented aspect of the API, is
 both human and machine readable, and can be compiled by a variety of
 toolsets (including for this Sphinx-based document). The spec file
 itself can be found
-[here](https://github.com/hyperledger/sawtooth-core/blob/master/rest_api/openapi.yaml).
+[here](https://github.com/splintercommunity/sawtooth-core/blob/master/rest_api/openapi.yaml).
 
 # HTTP Status Codes
 

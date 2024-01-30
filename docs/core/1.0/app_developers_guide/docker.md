@@ -1,6 +1,6 @@
 # Using Sawtooth with Docker
 
-This procedure walks through the process of setting up Hyperledger
+This procedure walks through the process of setting up
 Sawtooth for application development using Docker Compose, introduces
 some of the basic Sawtooth concepts necessary for application
 development, and walks through performing the following tasks:
@@ -24,7 +24,7 @@ writing clients which use Sawtooth\'s REST API.
 A running Sawtooth network consists of the following applications or
 processes:
 
-![Sawtooth components](../images/hyperledger_sawtooth_components.*){.align-center
+![Sawtooth components](../images/sawtooth_components.*){.align-center
 width="80.0%"}
 
 This diagram represents a simple network with just two validators and

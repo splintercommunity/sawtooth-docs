@@ -15,7 +15,7 @@
  * ------------------------------------------------------------------------------
  */
 
-var VERSION_URL = 'https://sawtooth.hyperledger.org/docs/versions.json';
+var VERSION_URL = 'https://sawtooth.splinter.dev/docs/versions.json';
 var versionRequest = new XMLHttpRequest();
 var versionSwitcher = document.getElementById('version_switcher');
 

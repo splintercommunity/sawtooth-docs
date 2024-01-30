@@ -7,7 +7,7 @@
   https://creativecommons.org/licenses/by/4.0/
 -->
 
-The Python SDK is installed automatically when you install Hyperledger
+The Python SDK is installed automatically when you install
 Sawtooth by following the instructions in
 `installing_sawtooth`{.interpreted-text role="doc"}. This tutorial
 explains how import the SDK into your Python environment.

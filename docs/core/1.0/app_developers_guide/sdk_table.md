@@ -27,7 +27,7 @@ The Maturity column shows the general maturity level of each feature:
 > 3.  Experimental: Might have known issues and future API changes
 
 The available SDKs are in
-<https://github.com/hyperledger/sawtooth-core/tree/master/sdk>.
+<https://github.com/splintercommunity/sawtooth-core/tree/master/sdk>.
 
 <!--
   Licensed under Creative Commons Attribution 4.0 International License

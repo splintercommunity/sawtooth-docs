@@ -148,17 +148,6 @@ functionality.
     and transaction processors for possible clues. For more information,
     see `log_configuration`{.interpreted-text role="doc"}.
 
-::: tip
-::: title
-Tip
-:::
-
-For help with problems, see the [Hyperledger Sawtooth
-FAQ](https://sawtooth.hyperledger.org/faq/) or ask a question on the
-Hyperledger Chat [#sawtooth
-channel](https://chat.hyperledger.org/channel/sawtooth).
-:::
-
 After verifying that Sawtooth is running correctly, you can continue
 with the optional configuration and customization steps that are
 described in the following procedures.

@@ -1,7 +1,7 @@
 # Configuring Validator and Transactor Permissions
 
 This section describes the validator and transactor permissions in
-Hyperledger Sawtooth.
+Sawtooth.
 
 -   [Transactor key permissioning]{.title-ref} controls who (which users
     and clients) can submit transactions and batches to a validator.

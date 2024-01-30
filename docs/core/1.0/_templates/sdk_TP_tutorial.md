@@ -28,7 +28,7 @@ Note
 The SDK contains a fully-implemented version of tic-tac-toe. This
 tutorial is meant to demonstrate the relevant concepts, rather than to
 create a complete implementation. See the
-[SDK](https://github.com/hyperledger/sawtooth-core/tree/master/sdk/examples)
+[SDK](https://github.com/splintercommunity/sawtooth-core/tree/master/sdk/examples)
 for full implementations in multiple languages.
 :::
 
@@ -491,11 +491,11 @@ def _encode_data(self, data):
 
 Game-play functionality can be implemented in different ways. For our
 implementation, see {% if language == \'JavaScript\' %}
-[sawtooth-core/sdk/examples/xo_javascript/xo_handler.js](https://github.com/hyperledger/sawtooth-core/blob/master/sdk/examples/xo_javascript/xo_handler.js).
+[sawtooth-core/sdk/examples/xo_javascript/xo_handler.js](https://github.com/splintercommunity/sawtooth-core/blob/master/sdk/examples/xo_javascript/xo_handler.js).
 {% elif language == \'Java\' %} the `playXo` function in
-[sawtooth-core/sdk/examples/xo_java/XoHandler.java](https://github.com/hyperledger/sawtooth-core/blob/master/sdk/examples/xo_java/XoHandler.java).
+[sawtooth-core/sdk/examples/xo_java/XoHandler.java](https://github.com/splintercommunity/sawtooth-core/blob/master/sdk/examples/xo_java/XoHandler.java).
 {% else %} the `_play_xo` function in
-[sawtooth-core/sdk/examples/xo_python/sawtooth_xo/processor/handler.py](https://github.com/hyperledger/sawtooth-core/blob/master/sdk/examples/xo_python/sawtooth_xo/processor/handler.py).
+[sawtooth-core/sdk/examples/xo_python/sawtooth_xo/processor/handler.py](https://github.com/splintercommunity/sawtooth-core/blob/master/sdk/examples/xo_python/sawtooth_xo/processor/handler.py).
 {% endif %} We choose to represent the board as a string of length 9,
 with each character in the string representing a space taken by X, a
 space taken by O, or a free space.

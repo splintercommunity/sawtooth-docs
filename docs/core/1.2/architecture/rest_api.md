@@ -1,6 +1,6 @@
 # REST API
 
-Hyperledger Sawtooth provides a REST API (see the
+Sawtooth provides a REST API (see the
 `../rest_api`{.interpreted-text role="doc"}) that allows clients to
 interact with a validator using common HTTP/JSON standards. It is a
 pragmatic RESTful API that provides a language-neutral interface for
