@@ -1,4 +1,4 @@
-# Copyright 2023 Bitwise IO, Inc.
+# Copyright 2023-2024 Bitwise IO, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-build:
+build: build-api
     #!/usr/bin/env sh
     set -e
 
@@ -25,10 +25,24 @@ build:
     bundle install
     bundle exec jekyll build
 
+build-api:
+    #!/usr/bin/env sh
+    set -e
+
+    cmd="redoc-cli build docs/1.2/openapi.yaml -o docs/1.2/rest_api/api/index.html"
+    echo "\033[1m$cmd\033[0m"
+    $cmd
+
+    echo
+    echo "** In MacOS: open docs/1.2/rest_api/api/index.html"
+
+    echo "\n\033[92mBuild API Success\033[0m\n"
+
 clean:
     rm -rf \
         .jekyll-metadata/ \
         _site/ \
+        docs/1.2/rest_api/api/ \
         Gemfile.lock
 
 install-jekyll-via-brew:
@@ -56,7 +70,7 @@ install-mdl:
 
     gem install mdl
 
-run:
+run: build-api
     #!/usr/bin/env sh
     set -e
 

@@ -49,17 +49,6 @@ RUN pydoc3 -w sawtooth_sdk/processor/* \
  && mkdir -p /tmp/python_sdk/signing \
  && cp *.html /tmp/python_sdk/signing
 
-# -------------=== redoc build ===-------------
-
-FROM node:lts-stretch as redoc
-
-RUN npm install -g redoc
-RUN npm install -g redoc-cli
-
-COPY . /project
-
-RUN redoc-cli bundle /project/docs/1.2/openapi.yaml -o index_1.2.html
-
 # -------------=== jekyll build ===-------------
 
 FROM jekyll/jekyll:3.8 as jekyll
