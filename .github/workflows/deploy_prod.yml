@@ -1,6 +1,9 @@
-name: Deploy-to-splinter.splinter.dev
+name: Deploy-to-sawtooth.splinter.dev
 
 on:
+  push:
+    branches: [ main ]
+
   workflow_dispatch:
 
 concurrency:
