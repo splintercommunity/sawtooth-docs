@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-url: https://sawtooth.splinter.dev/
+url: https://sawtooth.splinter.dev
 
 plugins:
 - jekyll-default-layout
