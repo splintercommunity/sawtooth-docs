@@ -1,5 +1,5 @@
 ---
-redirect_to: /docs/1.2/
+redirect_to: docs/1.2/
 ---
 
 <!--
